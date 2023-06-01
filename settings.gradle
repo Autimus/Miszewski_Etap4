@@ -1,0 +1,8 @@
+rootProject.name = 'Plemiona_Amazonki'
+include 'Utility'
+include 'Zwierzenta'
+include 'Zwierzenta'
+include 'Zwierzeta'
+include 'Pomocnicze'
+include 'Pola'
+

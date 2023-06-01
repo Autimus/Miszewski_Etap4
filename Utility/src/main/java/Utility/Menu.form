@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Utility.Menu">
+  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="12" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="20" y="20" width="1141" height="1297"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="f132e" class="javax.swing.JTextField" binding="Tukan">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="9568c" class="javax.swing.JTextField" binding="Drzewica">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="20" height="20"/>
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="a986a" class="javax.swing.JTextField" binding="Bielczyk">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="c692a" class="javax.swing.JTextField" binding="Mistigodryas">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="815d9" class="javax.swing.JTextField" binding="Bazyliszek">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="18e49" class="javax.swing.JTextField" binding="Anakonda">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="311cb" class="javax.swing.JTextField" binding="Zbrojnik">
+        <constraints>
+          <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="8c096" class="javax.swing.JTextField" binding="Kirysek">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="2c1f3" class="javax.swing.JTextField" binding="Akara">
+        <constraints>
+          <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="f871e" class="javax.swing.JTextField" binding="Kapibara">
+        <constraints>
+          <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="2dc70" class="javax.swing.JTextField" binding="Puma">
+        <constraints>
+          <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="e1e1d" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <labelFor value="9568c"/>
+          <text value="Drzewnica"/>
+        </properties>
+      </component>
+      <component id="2a5be" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Tukan"/>
+        </properties>
+      </component>
+      <component id="aec5f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Bielczyk"/>
+        </properties>
+      </component>
+      <component id="c784a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Mastigodryas"/>
+        </properties>
+      </component>
+      <component id="20055" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Bazyliszek"/>
+        </properties>
+      </component>
+      <component id="53583" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Anakonda"/>
+        </properties>
+      </component>
+      <component id="c939a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Zbrojnik"/>
+        </properties>
+      </component>
+      <component id="4e644" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Kirysek"/>
+        </properties>
+      </component>
+      <component id="19599" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Akara"/>
+        </properties>
+      </component>
+      <component id="8d214" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Kapibara"/>
+        </properties>
+      </component>
+      <component id="f3e75" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Puma"/>
+        </properties>
+      </component>
+      <component id="1f674" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Takano"/>
+        </properties>
+      </component>
+      <component id="76f8f" class="javax.swing.JTextField" binding="Takano">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="f3207" class="javax.swing.JTextField" binding="Yawanawa">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="230da" class="javax.swing.JTextField" binding="Kaxinawa">
+        <constraints>
+          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="ef2df" class="javax.swing.JTextField" binding="Nukini">
+        <constraints>
+          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="e12dd" class="javax.swing.JTextField" binding="Puyanawa">
+        <constraints>
+          <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="f9fc3" class="javax.swing.JTextField" binding="Katakina">
+        <constraints>
+          <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="9372a" class="javax.swing.JTextField" binding="Kuntanawa">
+        <constraints>
+          <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="75319" class="javax.swing.JTextField" binding="Shadawa">
+        <constraints>
+          <grid row="8" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="e9262" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Yawanawa"/>
+        </properties>
+      </component>
+      <component id="b82d6" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Kaxinawa"/>
+        </properties>
+      </component>
+      <component id="ff444" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Nukini"/>
+        </properties>
+      </component>
+      <component id="ce5d9" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Puyanawa"/>
+        </properties>
+      </component>
+      <component id="58616" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Katukina"/>
+        </properties>
+      </component>
+      <component id="e3c39" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Kuntanawa"/>
+        </properties>
+      </component>
+      <component id="f7e33" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <maximum-size width="100" height="40"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Shadawa"/>
+        </properties>
+      </component>
+      <component id="4679e" class="javax.swing.JSlider" binding="slider2">
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="2e0dd" class="javax.swing.JSlider" binding="slider1" default-binding="true">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="bb7a9" class="javax.swing.JSlider" binding="slider3">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="c54e3" class="javax.swing.JSlider" binding="slider4">
+        <constraints>
+          <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="3b0e8" class="javax.swing.JSlider" binding="slider5">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="3b5fb" class="javax.swing.JSlider" binding="slider11">
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="30dac" class="javax.swing.JSlider" binding="slider12">
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="dff10" class="javax.swing.JSlider" binding="slider13">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="8a1d9" class="javax.swing.JSlider" binding="slider14">
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="b5330" class="javax.swing.JSlider" binding="slider15">
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="71909" class="javax.swing.JSlider" binding="slider16">
+        <constraints>
+          <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="e1ba3" class="javax.swing.JSlider" binding="slider6">
+        <constraints>
+          <grid row="1" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="130f7" class="javax.swing.JSlider" binding="slider7">
+        <constraints>
+          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="36567" class="javax.swing.JSlider" binding="slider8">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="b010c" class="javax.swing.JSlider" binding="slider9">
+        <constraints>
+          <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="9b131" class="javax.swing.JSlider" binding="slider10">
+        <constraints>
+          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="274af" class="javax.swing.JSlider" binding="slider20">
+        <constraints>
+          <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="5a235" class="javax.swing.JSlider" binding="slider21">
+        <constraints>
+          <grid row="7" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="9740d" class="javax.swing.JSlider" binding="slider22">
+        <constraints>
+          <grid row="8" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="120" height="-1"/>
+            <maximum-size width="120" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <maximum value="20"/>
+          <value value="2"/>
+        </properties>
+      </component>
+      <component id="270d7" class="javax.swing.JButton" binding="startButton" default-binding="true">
+        <constraints>
+          <grid row="5" column="6" row-span="7" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="320" height="320"/>
+            <maximum-size width="250" height="100"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Start!"/>
+        </properties>
+      </component>
+      <component id="d4304" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Podaj wymiary mapy"/>
+        </properties>
+      </component>
+      <component id="ed3f8" class="javax.swing.JTextField" binding="Wysokosc">
+        <constraints>
+          <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="20"/>
+        </properties>
+      </component>
+      <component id="6a4b4" class="javax.swing.JTextField" binding="Szerokosc">
+        <constraints>
+          <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="20"/>
+        </properties>
+      </component>
+      <component id="49eb1" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Wysokość"/>
+        </properties>
+      </component>
+      <component id="3b556" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Szerokość"/>
+        </properties>
+      </component>
+      <component id="fa611" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Początkowe plemiona"/>
+        </properties>
+      </component>
+      <component id="2dc1e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="1" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="107" height="16"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Początkowe zwierzęta"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
