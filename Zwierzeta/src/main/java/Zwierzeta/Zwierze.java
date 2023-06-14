@@ -3,15 +3,17 @@ package Zwierzeta;
 import Pomocnicze.Jedzenie;
 import Pomocnicze.Koordy;
 
+import static Utility.Aplikacja.koncoweStatystyki;
+
 public class Zwierze {
-    public int id;
-    int wiek;
-    int szybkosc;
-    int sila;
+    protected int id;
+    protected int wiek;
+    protected int szybkosc;
+    protected int sila;
     protected float rozmiar;
-    public Koordy miejsce;
-    Jedzenie coJe;
-    public String grafika;
+    protected Koordy miejsce;
+    protected Jedzenie coJe;
+    protected String grafika;
     protected float jedzenie;
 
     public Zwierze(int id, int wiek, Koordy miejsce, String grafika) { //Wstepny konstruktor dla kazdego zwierzecia
@@ -43,8 +45,14 @@ public class Zwierze {
     public void zdobadzJedzenie(float jedzenie){
         this.jedzenie+=jedzenie;
     }
-    public void jedz(){
-
+    public void jedz(float ile){
+        if(czyZyje()) {
+            this.jedzenie-=this.rozmiar*ile;
+            if (this.jedzenie < 0) {
+                this.smierc();
+                koncoweStatystyki.put("Smierci z glodu",koncoweStatystyki.get("Smierci z glodu")+1);
+            }
+        }
     }
     public void smierc(){
         grafika="Smierc.png";
@@ -52,12 +60,26 @@ public class Zwierze {
         sila=0;
         rozmiar=0;
     }
-    public void starzej(){
+    public boolean starzej(){
+        if(czyZyje()) {
+            this.wiek += 1;
+            return true;
+        }else return false;
+    }
 
+    public boolean czyZyje(){
+        return (this.rozmiar!=0);
+    }
+    public int getId() {
+        return id;
     }
 
     public int getSila() {
         return sila;
+    }
+
+    public int getSzybkosc() {
+        return szybkosc;
     }
 
     public float getRozmiar() {
@@ -66,6 +88,18 @@ public class Zwierze {
 
     public float getJedzenie() {
         return jedzenie;
+    }
+
+    public String getGrafika() {
+        return grafika;
+    }
+
+    public Jedzenie getCoJe() {
+        return coJe;
+    }
+
+    public int getWiek() {
+        return wiek;
     }
 
     @Override

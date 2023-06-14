@@ -2,31 +2,28 @@ package Utility;
 
 import Pola.Pole;
 import Pomocnicze.*;
-import Zwierzeta.ListaZwierzat;
 import Zwierzeta.Zwierze;
 
 import java.awt.*;
 import java.util.*;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import javax.swing.*;
 
 import static Pomocnicze.TypPola.Woda;
-import static Zwierzeta.ListaZwierzat.iloscZwierzat;
 
-public class Panel extends JPanel {
-    Koordy rozmiarOkna, rozmiarSymulacji ,kafelki, rozmiarKafelek;
+public class Symulacja extends JPanel {
+    private Koordy rozmiarSymulacji ,kafelki, rozmiarKafelek;
     //    TypPola[][] mapa;
     public static List<Pole> listaPol=new ArrayList<>();
-    public List<Koordy> polaWody=new ArrayList<>();
-    List<Zwierze> listaZwierzat;
-    public Panel(Koordy rozmiarOkna, Koordy kafelki) {
-        setPreferredSize(new Dimension(rozmiarOkna.x, rozmiarOkna.y));
-        this.rozmiarOkna = rozmiarOkna;
-        this.rozmiarSymulacji=new Koordy((int)(this.rozmiarOkna.x*0.8),this.rozmiarOkna.y-41);
+    List<Koordy> polaWody=new ArrayList<>();
+    private List<Zwierze> listaZwierzat;
+    private boolean zwloki;
+
+    public Symulacja(Koordy rozmiarOkna, Koordy kafelki) {
+        this.rozmiarSymulacji=new Koordy((int)(rozmiarOkna.x*0.8),rozmiarOkna.y-41);
         this.rozmiarSymulacji=new Koordy(rozmiarSymulacji.x- rozmiarSymulacji.x% kafelki.x, rozmiarSymulacji.y- rozmiarSymulacji.y% kafelki.y);
+        setPreferredSize(new Dimension(rozmiarSymulacji.x+2, rozmiarSymulacji.y+2));
         this.kafelki = kafelki;
         this.rozmiarKafelek=new Koordy(rozmiarSymulacji.x/kafelki.x, rozmiarSymulacji.y/kafelki.y);
 //        this.mapa=new TypPola[kafelki.y][kafelki.x];
@@ -34,8 +31,8 @@ public class Panel extends JPanel {
     }
     public void rysujKafelki(Graphics g){
         for(Pole kafelek: listaPol){
-            g.setColor(kafelek.kolor);
-            g.fillRect(kafelek.miejsce.x* rozmiarKafelek.x, kafelek.miejsce.y* rozmiarKafelek.y,rozmiarKafelek.x, rozmiarKafelek.y);
+            g.setColor(kafelek.getKolor());
+            g.fillRect(kafelek.getMiejsce().x* rozmiarKafelek.x, kafelek.getMiejsce().y* rozmiarKafelek.y,rozmiarKafelek.x, rozmiarKafelek.y);
         }
         g.setColor(new Color(0,0,0));
         for(int i = 0;i<=kafelki.x;i++){
@@ -43,35 +40,6 @@ public class Panel extends JPanel {
         }
         for(int i = 0;i<=kafelki.y;i++){
             g.drawLine(0,i*rozmiarKafelek.y,rozmiarSymulacji.x,i*rozmiarKafelek.y);
-        }
-    }
-    private void rysujStatystyki(Graphics g){
-        Object[] kolejnoscWypisywania= Stream.concat(
-                Stream.concat(
-                        Arrays.stream(new Gatunek[]{Gatunek.Czlowiek}),
-                        Arrays.stream(Plemiona.values())
-                ),
-                Stream.concat(
-                        Stream.concat(
-                                Arrays.stream(new Gatunek[]{Gatunek.DorosleNieCzlowiek}),
-                                Arrays.stream(Gatunek.values()).filter(val->!val.equals(Gatunek.Czlowiek)&&!val.equals(Gatunek.DorosleNieCzlowiek))
-                        ),
-                        Stream.concat(
-                                Arrays.stream(new TypMlodych[]{TypMlodych.Mlode}),
-                                Arrays.stream(TypMlodych.values()).filter(val->!val.equals(TypMlodych.Mlode))
-                        )
-                )
-        ).collect(Collectors.toList()).toArray();
-        int line =1;
-        for (Object zwierze: kolejnoscWypisywania) {
-            if(line==1||line==10||line==26)
-                g.setFont(new Font("Arial",Font.BOLD,15));
-            else if(line==11||line==14||line==18||line==22)
-                g.setFont(new Font("Arial Black",Font.ITALIC,12));
-            else
-                g.setFont(new Font("Arial",Font.PLAIN,12));
-            g.drawString(zwierze+": "+iloscZwierzat.get(zwierze.toString()), (int)(rozmiarOkna.x*0.8),line*15);
-            line++;
         }
     }
     private void generujMape(){
@@ -117,45 +85,58 @@ public class Panel extends JPanel {
                 }
             }
         }
-        listaPol.sort((pole1,pole2)-> pole1.id- pole2.id);
+        listaPol.sort((pole1,pole2)-> pole1.getId()- pole2.getId());
     }
     private void stworzPole(Koordy gdzie, TypPola typ){
         Color kolor=new Color(255,255,255);
-        float ileGeneruje=0.5F;
+        float ileGeneruje=0.5f;
         int czasGeneracji=1;
         switch (typ){
             case Woda:
                 kolor=new Color(0,100,200);
+                ileGeneruje+=0.5f;
+                czasGeneracji+=1;
                 break;
             case Trawa:
                 kolor=new Color(150,255,50);
                 break;
             case Drzewa:
                 kolor=new Color(0,100,50);
-                ileGeneruje+=5.5;
+                ileGeneruje+=5.5f;
                 czasGeneracji+=2;
                 break;
             case Krzaki:
                 kolor=new Color(0,255,0);
-                ileGeneruje+=1.5;
+                ileGeneruje+=2.5f;
                 czasGeneracji+=1;
                 break;
             case Ziemia:
                 kolor=new Color(235,190,103);
-                czasGeneracji+=2;
+                czasGeneracji+=3;
                 break;
         }
         listaPol.add(new Pole(gdzie.x+ gdzie.y*kafelki.y,typ,gdzie,ileGeneruje,czasGeneracji,kolor));
     }
-    private void rysujZwierzeta(Graphics g) {
-        if(!listaZwierzat.equals(null))
+    public synchronized void rysujZwierzeta(Graphics g) {
+//   if(listaZwierzat != null)
+        try {
             for (Zwierze zwierze : listaZwierzat) {
-                g.drawImage((new ImageIcon("Utility/src/main/resources/" + zwierze.grafika)).getImage(),
+                if(zwloki || zwierze.czyZyje())
+                g.drawImage((new ImageIcon("Utility/src/main/resources/" + zwierze.getGrafika())).getImage(),
                         rozmiarKafelek.x * zwierze.getMiejsce().x, rozmiarKafelek.y * zwierze.getMiejsce().y, rozmiarKafelek.x, rozmiarKafelek.y, this);
             }
+        }catch (Exception e){}
     }
     public void sendListaZwierzat(List<Zwierze> listaZwierzat){
         this.listaZwierzat=listaZwierzat;
+    }
+
+    public synchronized void wykonajPetle(int tura,boolean zwloki){
+        this.zwloki = zwloki;
+        for (Pole pole: this.listaPol) {
+            if(tura%pole.getCzasGeneracji()==0) //Jeżeli minął określony czas generacji jedzenia
+                pole.generujJedzenie();
+        }
     }
 
     @Override
@@ -163,7 +144,6 @@ public class Panel extends JPanel {
         super.paintComponent(grap);
         Graphics2D g = (Graphics2D) grap;
         rysujKafelki(g);
-        rysujStatystyki(g);
         rysujZwierzeta(g);
     }
 }

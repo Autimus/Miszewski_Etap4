@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Utility.Menu">
-  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="12" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="12" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="10" left="10" bottom="10" right="10"/>
     <constraints>
       <xy x="20" y="20" width="1141" height="1297"/>
@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="f132e" class="javax.swing.JTextField" binding="Tukan">
+      <component id="70c3c" class="javax.swing.JFormattedTextField" binding="Tukan">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -19,7 +19,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="9568c" class="javax.swing.JTextField" binding="Drzewica">
+      <component id="df390" class="javax.swing.JFormattedTextField" binding="Drzewica">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <minimum-size width="20" height="20"/>
@@ -31,7 +31,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="a986a" class="javax.swing.JTextField" binding="Bielczyk">
+      <component id="45953" class="javax.swing.JFormattedTextField" binding="Bielczyk">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -42,7 +42,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="c692a" class="javax.swing.JTextField" binding="Mistigodryas">
+      <component id="d5a33" class="javax.swing.JFormattedTextField" binding="Mistigodryas">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -53,7 +53,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="815d9" class="javax.swing.JTextField" binding="Bazyliszek">
+      <component id="cb668" class="javax.swing.JFormattedTextField" binding="Bazyliszek">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -64,7 +64,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="18e49" class="javax.swing.JTextField" binding="Anakonda">
+      <component id="ff974" class="javax.swing.JFormattedTextField" binding="Anakonda">
         <constraints>
           <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -75,7 +75,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="311cb" class="javax.swing.JTextField" binding="Zbrojnik">
+      <component id="e450c" class="javax.swing.JFormattedTextField" binding="Zbrojnik">
         <constraints>
           <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -86,7 +86,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="8c096" class="javax.swing.JTextField" binding="Kirysek">
+      <component id="8bb37" class="javax.swing.JFormattedTextField" binding="Kirysek">
         <constraints>
           <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -97,7 +97,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="2c1f3" class="javax.swing.JTextField" binding="Akara">
+      <component id="f116a" class="javax.swing.JFormattedTextField" binding="Akara">
         <constraints>
           <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -108,7 +108,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="f871e" class="javax.swing.JTextField" binding="Kapibara">
+      <component id="c2a0a" class="javax.swing.JFormattedTextField" binding="Kapibara">
         <constraints>
           <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -119,7 +119,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="2dc70" class="javax.swing.JTextField" binding="Puma">
+      <component id="8e2b9" class="javax.swing.JFormattedTextField" binding="Puma">
         <constraints>
           <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -137,7 +137,7 @@
           </grid>
         </constraints>
         <properties>
-          <labelFor value="9568c"/>
+          <labelFor value="df390"/>
           <text value="Drzewnica"/>
         </properties>
       </component>
@@ -251,9 +251,9 @@
           <text value="Takano"/>
         </properties>
       </component>
-      <component id="76f8f" class="javax.swing.JTextField" binding="Takano">
+      <component id="652b7" class="javax.swing.JFormattedTextField" binding="Takano">
         <constraints>
-          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
             <maximum-size width="50" height="50"/>
           </grid>
@@ -262,7 +262,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="f3207" class="javax.swing.JTextField" binding="Yawanawa">
+      <component id="4f7b9" class="javax.swing.JFormattedTextField" binding="Yawanawa">
         <constraints>
           <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -273,7 +273,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="230da" class="javax.swing.JTextField" binding="Kaxinawa">
+      <component id="9359a" class="javax.swing.JFormattedTextField" binding="Kaxinawa">
         <constraints>
           <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -284,7 +284,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="ef2df" class="javax.swing.JTextField" binding="Nukini">
+      <component id="bf703" class="javax.swing.JFormattedTextField" binding="Nukini">
         <constraints>
           <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -295,7 +295,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="e12dd" class="javax.swing.JTextField" binding="Puyanawa">
+      <component id="49f92" class="javax.swing.JFormattedTextField" binding="Puyanawa">
         <constraints>
           <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -306,7 +306,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="f9fc3" class="javax.swing.JTextField" binding="Katakina">
+      <component id="e52db" class="javax.swing.JFormattedTextField" binding="Katakina">
         <constraints>
           <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -317,7 +317,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="9372a" class="javax.swing.JTextField" binding="Kuntanawa">
+      <component id="e5db" class="javax.swing.JFormattedTextField" binding="Kuntanawa">
         <constraints>
           <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -328,7 +328,7 @@
           <text value="2"/>
         </properties>
       </component>
-      <component id="75319" class="javax.swing.JTextField" binding="Shadawa">
+      <component id="f9c72" class="javax.swing.JFormattedTextField" binding="Shadawa">
         <constraints>
           <grid row="8" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -637,26 +637,7 @@
           <value value="2"/>
         </properties>
       </component>
-      <component id="270d7" class="javax.swing.JButton" binding="startButton" default-binding="true">
-        <constraints>
-          <grid row="5" column="6" row-span="7" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="320" height="320"/>
-            <maximum-size width="250" height="100"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="Start!"/>
-        </properties>
-      </component>
-      <component id="d4304" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="0" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Podaj wymiary mapy"/>
-        </properties>
-      </component>
-      <component id="ed3f8" class="javax.swing.JTextField" binding="Wysokosc">
+      <component id="a90b7" class="javax.swing.JFormattedTextField" binding="Wysokosc">
         <constraints>
           <grid row="1" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -665,9 +646,10 @@
         </constraints>
         <properties>
           <text value="20"/>
+          <verifyInputWhenFocusTarget value="true"/>
         </properties>
       </component>
-      <component id="6a4b4" class="javax.swing.JTextField" binding="Szerokosc">
+      <component id="aea0c" class="javax.swing.JFormattedTextField" binding="Szerokosc">
         <constraints>
           <grid row="2" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
@@ -675,7 +657,9 @@
           </grid>
         </constraints>
         <properties>
+          <inheritsPopupMenu value="false"/>
           <text value="20"/>
+          <verifyInputWhenFocusTarget value="true"/>
         </properties>
       </component>
       <component id="49eb1" class="javax.swing.JLabel">
@@ -710,6 +694,125 @@
         </constraints>
         <properties>
           <text value="Początkowe zwierzęta"/>
+        </properties>
+      </component>
+      <component id="bd7af" class="javax.swing.JButton" binding="a1920X1080PxButton" default-binding="true">
+        <constraints>
+          <grid row="6" column="6" row-span="1" col-span="2" vsize-policy="1" hsize-policy="1" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="97" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="18" style="0"/>
+          <text value="1920 x 1080 px"/>
+        </properties>
+      </component>
+      <component id="19a86" class="javax.swing.JButton" binding="a800X600PxButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="6" row-span="1" col-span="2" vsize-policy="1" hsize-policy="1" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="97" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="18" style="0"/>
+          <text value="800 x 600 px"/>
+        </properties>
+      </component>
+      <component id="a2d55" class="javax.swing.JButton" binding="a1280X720PxButton" default-binding="true">
+        <constraints>
+          <grid row="5" column="6" row-span="1" col-span="2" vsize-policy="1" hsize-policy="1" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="97" height="45"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Arial Black" size="18" style="0"/>
+          <text value="1280 x 720 px"/>
+        </properties>
+      </component>
+      <component id="d4304" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="1" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Podaj wymiary mapy"/>
+        </properties>
+      </component>
+      <component id="3e71a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Wybierz rozdzielczość symulacji"/>
+        </properties>
+      </component>
+      <component id="270d7" class="javax.swing.JButton" binding="startButton" default-binding="true">
+        <constraints>
+          <grid row="7" column="6" row-span="5" col-span="2" vsize-policy="2" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="100" height="100"/>
+            <maximum-size width="400" height="400"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Source Code Pro Black" size="48" style="1"/>
+          <text value="Start!"/>
+        </properties>
+      </component>
+      <component id="300e" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="9" column="3" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Ile jedzenia muszą zjadać co turę?"/>
+        </properties>
+      </component>
+      <component id="41d15" class="javax.swing.JSlider" binding="Jedzenie">
+        <constraints>
+          <grid row="10" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="200" height="-1"/>
+            <maximum-size width="200" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <enabled value="true"/>
+          <inverted value="false"/>
+          <majorTickSpacing value="1"/>
+          <maximum value="10"/>
+          <minimum value="1"/>
+          <minorTickSpacing value="1"/>
+          <paintLabels value="true"/>
+          <paintTicks value="true"/>
+          <value value="5"/>
+          <valueIsAdjusting value="false"/>
+        </properties>
+      </component>
+      <component id="216f7" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="10" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="(ułamek ich wielkości)"/>
+        </properties>
+      </component>
+      <component id="11e69" class="javax.swing.JTextField" binding="Wszystkie">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
+        </properties>
+      </component>
+      <component id="837af" class="javax.swing.JTextField" binding="Plemiennicy">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="50"/>
+            <maximum-size width="50" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="2"/>
         </properties>
       </component>
     </children>
