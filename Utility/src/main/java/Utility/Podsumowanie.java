@@ -9,9 +9,9 @@ import java.util.Map;
  */
 public class Podsumowanie extends JFrame {
     /**
-     * Instantiates a new Podsumowanie. Tworzy nowe okno wyswietlajace uzbierane statystyki końcowe. Zamknięcie okna oznacza zakończenie programu.
+     * Instantiates a new Podsumowanie. Tworzy nowe okno wyswietlajace uzbierane statystyki ko&#x144;cowe. Zamkni&#x119;cie okna oznacza zako&#x144;czenie programu.
      *
-     * @param dane statystyki końcowe zbierane przez Aplikację
+     * @param dane statystyki ko&#x144;cowe zbierane przez Aplikacj&#x119;
      */
     public Podsumowanie(Map<String,Float> dane){
         JPanel centrum = new JPanel();

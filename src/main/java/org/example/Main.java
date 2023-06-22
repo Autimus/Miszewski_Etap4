@@ -7,7 +7,7 @@ import Utility.Aplikacja;
  */
 public class Main {
     /**
-     * Tworzy obiekt klasy Aplikacja i ustawia w nim pętlę o okresie 1s
+     * Tworzy obiekt klasy Aplikacja i ustawia w nim p&#x119;tl&#x119; o okresie 1s
      *
      * @param args the args
      */

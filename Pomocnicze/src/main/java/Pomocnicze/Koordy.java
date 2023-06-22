@@ -8,18 +8,18 @@ import java.util.Random;
  */
 public class Koordy {
     /**
-     * wartość int w wymiarze X
+     * warto&#x15B;&#x107; int w wymiarze X
      */
     public int x, /**
-     * wartość int w wymiarze Y
+     * warto&#x15B;&#x107; int w wymiarze Y
      */
     y;
 
     /**
-     * Systematyzuje wymiary w dwóch wymiarach X oraz Y, uławiając do nich dostęp, poprzez uzycie publicznych atrybutów.
+     * Systematyzuje wymiary w dw&oacute;ch wymiarach X oraz Y, u&#x142;awiaj&#x105;c do nich dost&#x119;p, poprzez uzycie publicznych atrybut&oacute;w.
      *
-     * @param x wartość int w wymiarze X
-     * @param y wartość int w wymiarze Y
+     * @param x warto&#x15B;&#x107; int w wymiarze X
+     * @param y warto&#x15B;&#x107; int w wymiarze Y
      */
     public Koordy(int x, int y) {
         this.x = x;
@@ -35,17 +35,17 @@ public class Koordy {
     }
 
     /**
-     * Zwraca odległość obecnego obiektu Koordy od zadanego w parametrach. Liczona jest poruszając sie jedynie prawo, lewo, gora, dół
+     * Zwraca odleg&#x142;o&#x15B;&#x107; obecnego obiektu Koordy od zadanego w parametrach. Liczona jest poruszaj&#x105;c sie jedynie prawo, lewo, gora, d&oacute;&#x142;
      *
      * @param koordy Koordy oodalone od obecnych
-     * @return odległość
+     * @return odleg&#x142;o&#x15B;&#x107;
      */
     public int odleglosc(Koordy koordy){
         return Math.abs(x- koordy.x)+Math.abs(y- koordy.y);
     }
 
     /**
-     * Jeżeli x==-1 oraz y==-1 Koordy są null
+     * Je&#x17C;eli x==-1 oraz y==-1 Koordy s&#x105; null
      *
      * @return the boolean
      */
@@ -54,10 +54,10 @@ public class Koordy {
     }
 
     /**
-     * Tworzy nowe koordy z losowymi zmiennymi stałymi, poniżej zadanych parametrów
+     * Tworzy nowe koordy z losowymi zmiennymi sta&#x142;ymi, poni&#x17C;ej zadanych parametr&oacute;w
      *
-     * @param underX poniżej jakiego X ma być zwracana wartość X
-     * @param underY poniżej jakiego Y ma być zwracana wartość Y
+     * @param underX poni&#x17C;ej jakiego X ma by&#x107; zwracana warto&#x15B;&#x107; X
+     * @param underY poni&#x17C;ej jakiego Y ma by&#x107; zwracana warto&#x15B;&#x107; Y
      * @return the koordy
      */
     public Koordy losoweMiejsce(int underX,int underY){
@@ -66,9 +66,9 @@ public class Koordy {
     }
 
     /**
-     * Porównuje swoje x oraz y z innym obiektem Koordy.
-     * @param o Obiekt to sprawdzenia. Wartośc true jest możliwa do zwrócenia jedynie kiedy Obiekt jest typu Koordy
-     * @return true jeżeli x oraz y są sobie równe, w przeciwnym wypadku false
+     * Por&oacute;wnuje swoje x oraz y z innym obiektem Koordy.
+     * @param o Obiekt to sprawdzenia. Warto&#x15B;c true jest mo&#x17C;liwa do zwr&oacute;cenia jedynie kiedy Obiekt jest typu Koordy
+     * @return true je&#x17C;eli x oraz y s&#x105; sobie r&oacute;wne, w przeciwnym wypadku false
      */
     @Override
     public boolean equals(Object o) {

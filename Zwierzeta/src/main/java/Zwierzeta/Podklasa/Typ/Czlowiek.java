@@ -12,19 +12,19 @@ import static Zwierzeta.ListaZwierzat.iloscZwierzat;
  */
 public class Czlowiek extends Ssak {
     /**
-     * Plemie do ktorego przynależy czlowiek.
+     * Plemie do ktorego przynale&#x17C;y czlowiek.
      */
     public Plemiona plemie;
 
     /**
      * Instantiates a new Czlowiek.
      *
-     * @param wstepne  wstępne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafikę.
-     * @param szybkosc szybkosc - ile pól jest w stanei przejśc co turę
+     * @param wstepne  wst&#x119;pne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafik&#x119;.
+     * @param szybkosc szybkosc - ile p&oacute;l jest w stanei przej&#x15B;c co tur&#x119;
      * @param sila     sila - wykorzystywana w walce z innymi zwierzeciami
-     * @param rozmiar  rozmiar - wplywa na ilość zjadanego pożywienia
-     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze może jeść mięso albo rośliny
-     * @param dlugoscZycia ile tur od utworzenia do śmierci ze starości
+     * @param rozmiar  rozmiar - wplywa na ilo&#x15B;&#x107; zjadanego po&#x17C;ywienia
+     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze mo&#x17C;e je&#x15B;&#x107; mi&#x119;so albo ro&#x15B;liny
+     * @param dlugoscZycia ile tur od utworzenia do &#x15B;mierci ze staro&#x15B;ci
      * @param gatunek      Enum Gatunek
      * @param plemie       Enum Plemiona
      */

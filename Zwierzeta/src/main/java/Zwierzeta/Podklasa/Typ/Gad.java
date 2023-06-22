@@ -14,12 +14,12 @@ public class Gad extends Dorosle {
     /**
      * Instantiates a new Gad.
      *
-     * @param wstepne  wstępne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafikę.
-     * @param szybkosc szybkosc - ile pól jest w stanei przejśc co turę
+     * @param wstepne  wst&#x119;pne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafik&#x119;.
+     * @param szybkosc szybkosc - ile p&oacute;l jest w stanei przej&#x15B;c co tur&#x119;
      * @param sila     sila - wykorzystywana w walce z innymi zwierzeciami
-     * @param rozmiar  rozmiar - wplywa na ilość zjadanego pożywienia
-     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze może jeść mięso albo rośliny
-     * @param dlugoscZycia ile tur od utworzenia do śmierci ze starości
+     * @param rozmiar  rozmiar - wplywa na ilo&#x15B;&#x107; zjadanego po&#x17C;ywienia
+     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze mo&#x17C;e je&#x15B;&#x107; mi&#x119;so albo ro&#x15B;liny
+     * @param dlugoscZycia ile tur od utworzenia do &#x15B;mierci ze staro&#x15B;ci
      * @param gatunek      Enum Gatunek
      */
     public Gad(Zwierze wstepne, int szybkosc, int sila, float rozmiar, Jedzenie coJe, int dlugoscZycia, Gatunek gatunek) {
@@ -28,7 +28,7 @@ public class Gad extends Dorosle {
     }
 
     /**
-     * Jeżeli gad zje wiecej jedzenia niż posiada rozmiar staje sie najedzony na kilka tur. Najedzenie zmniejsza siłę oraz szybkość gada.
+     * Je&#x17C;eli gad zje wiecej jedzenia ni&#x17C; posiada rozmiar staje sie najedzony na kilka tur. Najedzenie zmniejsza si&#x142;&#x119; oraz szybko&#x15B;&#x107; gada.
      * @param jedzenie the jedzenie
      */
     @Override

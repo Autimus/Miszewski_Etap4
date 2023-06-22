@@ -33,8 +33,8 @@ public class Symulacja extends JPanel {
     /**
      * Instantiates a new Symulacja.
      *
-     * @param rozmiarOkna rozmiar okna typu Koordy, zawiera wymiary okna Aplikacji wyrażone w pixelach
-     * @param kafelki     rozmiar mapy typu Koordy, określający z ilu kafelek składa się mapa w wymiarze X oraz Y
+     * @param rozmiarOkna rozmiar okna typu Koordy, zawiera wymiary okna Aplikacji wyra&#x17C;one w pixelach
+     * @param kafelki     rozmiar mapy typu Koordy, okre&#x15B;laj&#x105;cy z ilu kafelek sk&#x142;ada si&#x119; mapa w wymiarze X oraz Y
      */
     public Symulacja(Koordy rozmiarOkna, Koordy kafelki) {
         this.rozmiarSymulacji=new Koordy((int)(rozmiarOkna.x*0.8),rozmiarOkna.y-41);
@@ -65,7 +65,7 @@ public class Symulacja extends JPanel {
     }
 
     /**
-     * Generuję nową losową mapę na podstawie wymiarów okna oraz mapy. Lokalizacja oraz typ pol są losowe, lecz pola wody mogą występować jedynie obok innego pola wody.
+     * Generuj&#x119; now&#x105; losow&#x105; map&#x119; na podstawie wymiar&oacute;w okna oraz mapy. Lokalizacja oraz typ pol s&#x105; losowe, lecz pola wody mog&#x105; wyst&#x119;powa&#x107; jedynie obok innego pola wody.
      */
     private void generujMape(){
         java.util.List<Koordy> pustePola=new ArrayList<>();
@@ -116,7 +116,7 @@ public class Symulacja extends JPanel {
     /**
      * Tworzy nowe Pole, nadaje mu odpowiednie statystyki na podstawie jego typu.
      * @param gdzie lokalizacja tworzonego miejsca typu Koordy
-     * @param typ typ tworzonego Pola (wartosć Enum TypPola)
+     * @param typ typ tworzonego Pola (wartos&#x107; Enum TypPola)
      */
     private void stworzPole(Koordy gdzie, TypPola typ){
         Color kolor=new Color(255,255,255);
@@ -150,7 +150,7 @@ public class Symulacja extends JPanel {
     }
 
     /**
-     * Rysuje wszystkie zwierzęta z stałej zmiennej listaZwierząt zaimportowanej z Utility.Aplikacja.
+     * Rysuje wszystkie zwierz&#x119;ta z sta&#x142;ej zmiennej listaZwierz&#x105;t zaimportowanej z Utility.Aplikacja.
      *
      * @param g the Graphics g
      */
@@ -168,7 +168,7 @@ public class Symulacja extends JPanel {
      * Wykonaj petle.
      *
      * @param tura   obecna tura - int
-     * @param zwloki wyraża czy wyświetlać na symulacji zwloki zwierząt
+     * @param zwloki wyra&#x17C;a czy wy&#x15B;wietla&#x107; na symulacji zwloki zwierz&#x105;t
      */
     public synchronized void wykonajPetle(int tura,boolean zwloki){
         this.zwloki = zwloki;
@@ -179,7 +179,7 @@ public class Symulacja extends JPanel {
     }
 
     /**
-     * Przy każdym wywołaniu paint albo repaint maluje mapę symulacji oraz zwierzęta, korzystajac z metod rysujKafelki() oraz rysujZwierzeta()
+     * Przy ka&#x17C;dym wywo&#x142;aniu paint albo repaint maluje map&#x119; symulacji oraz zwierz&#x119;ta, korzystajac z metod rysujKafelki() oraz rysujZwierzeta()
      * @param grap the <code>Graphics</code> object to protect
      */
     @Override

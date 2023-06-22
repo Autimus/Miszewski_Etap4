@@ -12,7 +12,7 @@ import java.util.Map;
  */
 public class Menu extends JFrame {
     /**
-     * Dane przekazywane do Symulacji po naciśnięciu przycisku "Start". Zawierają liczebność każdego gatunku zwierząt oraz plemion, jak i wymiary mapy, rozdzielczość symulacji oraz ilość jedzenia potrzebnego zwierzętom to przezycia tury.
+     * Dane przekazywane do Symulacji po naci&#x15B;ni&#x119;ciu przycisku "Start". Zawieraj&#x105; liczebno&#x15B;&#x107; ka&#x17C;dego gatunku zwierz&#x105;t oraz plemion, jak i wymiary mapy, rozdzielczo&#x15B;&#x107; symulacji oraz ilo&#x15B;&#x107; jedzenia potrzebnego zwierz&#x119;tom to przezycia tury.
      */
     public Map<String, Integer> dane = new HashMap<>();
     private JPanel panel;

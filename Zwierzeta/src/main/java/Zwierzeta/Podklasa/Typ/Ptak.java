@@ -14,12 +14,12 @@ public class Ptak extends Dorosle {
     /**
      * Instantiates a new Ptak.
      *
-     * @param wstepne  wstępne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafikę.
-     * @param szybkosc szybkosc - ile pól jest w stanei przejśc co turę
+     * @param wstepne  wst&#x119;pne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafik&#x119;.
+     * @param szybkosc szybkosc - ile p&oacute;l jest w stanei przej&#x15B;c co tur&#x119;
      * @param sila     sila - wykorzystywana w walce z innymi zwierzeciami
-     * @param rozmiar  rozmiar - wplywa na ilość zjadanego pożywienia
-     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze może jeść mięso albo rośliny
-     * @param dlugoscZycia ile tur od utworzenia do śmierci ze starości
+     * @param rozmiar  rozmiar - wplywa na ilo&#x15B;&#x107; zjadanego po&#x17C;ywienia
+     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze mo&#x17C;e je&#x15B;&#x107; mi&#x119;so albo ro&#x15B;liny
+     * @param dlugoscZycia ile tur od utworzenia do &#x15B;mierci ze staro&#x15B;ci
      * @param gatunek      Enum Gatunek
      */
     public Ptak(Zwierze wstepne, int szybkosc, int sila, float rozmiar, Jedzenie coJe, int dlugoscZycia, Gatunek gatunek) {
@@ -27,7 +27,7 @@ public class Ptak extends Dorosle {
     }
 
     /**
-     * Ptak za pomocą lotu ma szansę na ucieczkę z walki, jednakże będąc w powietrzu jest w stanie zbierać jedynie 1/3 znalezionego jedzenia.
+     * Ptak za pomoc&#x105; lotu ma szans&#x119; na ucieczk&#x119; z walki, jednak&#x17C;e b&#x119;d&#x105;c w powietrzu jest w stanie zbiera&#x107; jedynie 1/3 znalezionego jedzenia.
      */
     public void lot(){
         wPowietrzu=true;

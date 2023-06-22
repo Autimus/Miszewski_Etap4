@@ -21,11 +21,11 @@ public class Pole {
      * Instantiates a new Pole.
      *
      * @param id            id pola
-     * @param typ           typ pola - wartość Enum z TypPola
-     * @param miejsce       miejsce na mapie wyrażone za pomocą Koordy
-     * @param ileGeneruje   ile generuje jedzenia co turę
+     * @param typ           typ pola - warto&#x15B;&#x107; Enum z TypPola
+     * @param miejsce       miejsce na mapie wyra&#x17C;one za pomoc&#x105; Koordy
+     * @param ileGeneruje   ile generuje jedzenia co tur&#x119;
      * @param czasGeneracji ile tur zajmuje generacja jedzenia
-     * @param kolor         wyświetlany kolor pola
+     * @param kolor         wy&#x15B;wietlany kolor pola
      */
     public Pole(int id, TypPola typ, Koordy miejsce, float ileGeneruje, int czasGeneracji, Color kolor) {
         this.id = id;
@@ -56,7 +56,7 @@ public class Pole {
     }
 
     /**
-     * Zwiększa jedzenie pola o ilość przechowywaną w zmiennej ileGeneruje.
+     * Zwi&#x119;ksza jedzenie pola o ilo&#x15B;&#x107; przechowywan&#x105; w zmiennej ileGeneruje.
      */
     public void generujJedzenie() {
         this.jedzenie+=ileGeneruje;

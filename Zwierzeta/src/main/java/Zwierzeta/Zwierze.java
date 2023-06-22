@@ -14,11 +14,11 @@ public class Zwierze {
      */
     protected int id;
     /**
-     * wiek wyrażany w int
+     * wiek wyra&#x17C;any w int
      */
     protected int wiek;
     /**
-     * ile pól jest w stanei przejśc co turę
+     * ile p&oacute;l jest w stanei przej&#x15B;c co tur&#x119;
      */
     protected int szybkosc;
     /**
@@ -26,7 +26,7 @@ public class Zwierze {
      */
     protected int sila;
     /**
-     * wplywa na ilość zjadanego pożywienia
+     * wplywa na ilo&#x15B;&#x107; zjadanego po&#x17C;ywienia
      */
     protected float rozmiar;
     /**
@@ -34,25 +34,25 @@ public class Zwierze {
      */
     protected Koordy miejsce;
     /**
-     * Enum Jedzenie. Ustala czy zwierze może jeść mięso albo rośliny
+     * Enum Jedzenie. Ustala czy zwierze mo&#x17C;e je&#x15B;&#x107; mi&#x119;so albo ro&#x15B;liny
      */
     protected Jedzenie coJe;
     /**
-     * grafika zwierzęcia przechowywana jako String. Wszystkie grafiki znajdują się w \Utility\src\main\resources
+     * grafika zwierz&#x119;cia przechowywana jako String. Wszystkie grafiki znajduj&#x105; si&#x119; w \Utility\src\main\resources
      */
     protected String grafika;
     /**
-     * ilość jedzenia jakie posiada aktualnie zwierze
+     * ilo&#x15B;&#x107; jedzenia jakie posiada aktualnie zwierze
      */
     protected float jedzenie;
 
     /**
-     * Wstępny konstruktor zwierzęcia, bez doprecyzowania gatunku i konkretnej klasy.
+     * Wst&#x119;pny konstruktor zwierz&#x119;cia, bez doprecyzowania gatunku i konkretnej klasy.
      *
      * @param id      id
-     * @param wiek    wiek wyrażany w int
+     * @param wiek    wiek wyra&#x17C;any w int
      * @param miejsce miejsce na mapie typu Koordy
-     * @param grafika grafika zwierzęcia przechowywana jako String. Wszystkie grafiki znajdują się w \Utility\src\main\resources
+     * @param grafika grafika zwierz&#x119;cia przechowywana jako String. Wszystkie grafiki znajduj&#x105; si&#x119; w \Utility\src\main\resources
      */
     public Zwierze(int id, int wiek, Koordy miejsce, String grafika) { //Wstepny konstruktor dla kazdego zwierzecia
         this.id = id;
@@ -62,13 +62,13 @@ public class Zwierze {
     }
 
     /**
-     * Konstruktor używany przez dziedziczące klasy.
+     * Konstruktor u&#x17C;ywany przez dziedzicz&#x105;ce klasy.
      *
-     * @param wstepne  wstępne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafikę.
-     * @param szybkosc szybkosc - ile pól jest w stanei przejśc co turę
+     * @param wstepne  wst&#x119;pne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafik&#x119;.
+     * @param szybkosc szybkosc - ile p&oacute;l jest w stanei przej&#x15B;c co tur&#x119;
      * @param sila     sila - wykorzystywana w walce z innymi zwierzeciami
-     * @param rozmiar  rozmiar - wplywa na ilość zjadanego pożywienia
-     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze może jeść mięso albo rośliny
+     * @param rozmiar  rozmiar - wplywa na ilo&#x15B;&#x107; zjadanego po&#x17C;ywienia
+     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze mo&#x17C;e je&#x15B;&#x107; mi&#x119;so albo ro&#x15B;liny
      */
     public Zwierze(Zwierze wstepne, int szybkosc, int sila, float rozmiar, Jedzenie coJe) { //Pełny konstruktor, na podstawie wstepnego zwierzecia
         this.id = wstepne.id;
@@ -110,9 +110,9 @@ public class Zwierze {
     }
 
     /**
-     * Jedz. Jeżeli zwierze nie ma wystarczająco jedzenia umiera.
+     * Jedz. Je&#x17C;eli zwierze nie ma wystarczaj&#x105;co jedzenia umiera.
      *
-     * @param ile ile ulamka swojego rozmiaru ma zjeść
+     * @param ile ile ulamka swojego rozmiaru ma zje&#x15B;&#x107;
      */
     public void jedz(float ile){
         if(czyZyje()) {
@@ -125,7 +125,7 @@ public class Zwierze {
     }
 
     /**
-     * Szybkość, siła oraz rozmiar jest ustalany na 0. Zwierze jest pomijane w wykonywaniu pętli. Może zostać zjedzone przez inne zwierzęcia. Zmienia się wyświetlana grafika na Smierc.png .
+     * Szybko&#x15B;&#x107;, si&#x142;a oraz rozmiar jest ustalany na 0. Zwierze jest pomijane w wykonywaniu p&#x119;tli. Mo&#x17C;e zosta&#x107; zjedzone przez inne zwierz&#x119;cia. Zmienia si&#x119; wy&#x15B;wietlana grafika na Smierc.png .
      */
     public void smierc(){
         grafika="Smierc.png";
@@ -135,7 +135,7 @@ public class Zwierze {
     }
 
     /**
-     * Zwierze się starzeje, zwraca true jeżeli zwierze żyje.
+     * Zwierze si&#x119; starzeje, zwraca true je&#x17C;eli zwierze &#x17C;yje.
      *
      * @return the boolean
      */
@@ -147,7 +147,7 @@ public class Zwierze {
     }
 
     /**
-     * Zwraca true jeżeli żyje, zwraca false, jeżeli została wykonana metoda smierc() .
+     * Zwraca true je&#x17C;eli &#x17C;yje, zwraca false, je&#x17C;eli zosta&#x142;a wykonana metoda smierc() .
      *
      * @return the boolean
      */

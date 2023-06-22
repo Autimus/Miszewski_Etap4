@@ -8,143 +8,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="063350ec-791c-40ea-a969-98f0fdbca26c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pola/build/classes/java/main/Pola/Pole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pola/build/libs/Pola-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pola/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pola/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pomocnicze/build/classes/java/main/Pomocnicze/Gatunek.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pomocnicze/build/classes/java/main/Pomocnicze/Jedzenie.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pomocnicze/build/classes/java/main/Pomocnicze/Koordy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pomocnicze/build/classes/java/main/Pomocnicze/Kryteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pomocnicze/build/classes/java/main/Pomocnicze/Plemiona.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pomocnicze/build/classes/java/main/Pomocnicze/TypMlodych.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pomocnicze/build/classes/java/main/Pomocnicze/TypPola.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pomocnicze/build/libs/Pomocnicze-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pomocnicze/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pomocnicze/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/classes/java/main/Utility/Aplikacja$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/classes/java/main/Utility/Aplikacja$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/classes/java/main/Utility/Aplikacja.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/classes/java/main/Utility/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/classes/java/main/Utility/Menu$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/classes/java/main/Utility/Menu$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/classes/java/main/Utility/Menu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/classes/java/main/Utility/Podsumowanie.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/classes/java/main/Utility/Statystyki.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/classes/java/main/Utility/Symulacja$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/classes/java/main/Utility/Symulacja.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Akara.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Anakonda.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Bazyliszek.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Bielczyk.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Drzewica.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/JajkoGad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/JajkoPtak.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Kapibara.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Katukina.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Kaxinawa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Kirysek.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Kuntanawa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Mastigodryas.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/MlodyGad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/MlodyPtak.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/MlodyRyba.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/MlodySsak.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Nukini.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Puma.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Puyanawa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Shawadawa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Smierc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Tukan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Tukano.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Yawanawa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/build/resources/main/Zbrojnik.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Aplikacja$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Aplikacja$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Podsumowanie.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Statystyki.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Symulacja$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Symulacja.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/classes/java/main/Zwierzeta/ListaZwierzat$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/classes/java/main/Zwierzeta/ListaZwierzat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/classes/java/main/Zwierzeta/Podklasa/Dorosle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/classes/java/main/Zwierzeta/Podklasa/Mlode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/classes/java/main/Zwierzeta/Podklasa/Typ/Czlowiek.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/classes/java/main/Zwierzeta/Podklasa/Typ/Gad.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/classes/java/main/Zwierzeta/Podklasa/Typ/Ptak.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/classes/java/main/Zwierzeta/Podklasa/Typ/Ryba.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/classes/java/main/Zwierzeta/Podklasa/Typ/Ssak.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/classes/java/main/Zwierzeta/Zwierze.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/libs/Zwierzeta-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Zwierzeta/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="063350ec-791c-40ea-a969-98f0fdbca26c" name="Changes" comment="Wersja z komentarzami w JavaDoc, wyczyszonym kodem oraz datagramem klas.">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pola/src/main/java/Pola/Pole.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pola/src/main/java/Pola/Pole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/Gatunek.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/Gatunek.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/Jedzenie.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/Jedzenie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/Koordy.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/Koordy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/Kryteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/Kryteria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/Plemiona.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/Plemiona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/TypMlodych.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/TypMlodych.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/TypPola.java" beforeDir="false" afterPath="$PROJECT_DIR$/Pomocnicze/src/main/java/Pomocnicze/TypPola.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/build/classes/java/main/Aplikacja.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/build/classes/java/main/Ekran.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/build/classes/java/main/Koordy.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/build/classes/java/main/Menu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Aplikacja.class" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Aplikacja.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$11.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$12.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$13.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$14.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$15.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$16.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$17.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$18.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$19.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$20.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/out/production/classes/Utility/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utility/src/main/java/Utility/Aplikacja.java" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/src/main/java/Utility/Aplikacja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utility/src/main/java/Utility/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Utility/src/main/java/Utility/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/src/main/java/Utility/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utility/src/main/java/Utility/Podsumowanie.java" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/src/main/java/Utility/Podsumowanie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utility/src/main/java/Utility/Statystyki.java" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/src/main/java/Utility/Statystyki.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utility/src/main/java/Utility/Symulacja.java" beforeDir="false" afterPath="$PROJECT_DIR$/Utility/src/main/java/Utility/Symulacja.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zwierzeta/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Zwierzeta/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zwierzeta/out/production/classes/Zwierzeta/ListaZwierzat$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/Zwierzeta/out/production/classes/Zwierzeta/ListaZwierzat$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zwierzeta/out/production/classes/Zwierzeta/ListaZwierzat.class" beforeDir="false" afterPath="$PROJECT_DIR$/Zwierzeta/out/production/classes/Zwierzeta/ListaZwierzat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zwierzeta/out/production/classes/Zwierzeta/Podklasa/Dorosle.class" beforeDir="false" afterPath="$PROJECT_DIR$/Zwierzeta/out/production/classes/Zwierzeta/Podklasa/Dorosle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Zwierzeta/out/production/classes/Zwierzeta/Zwierze.class" beforeDir="false" afterPath="$PROJECT_DIR$/Zwierzeta/out/production/classes/Zwierzeta/Zwierze.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/ListaZwierzat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/ListaZwierzat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/Podklasa/Dorosle.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/Podklasa/Dorosle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/Podklasa/Mlode.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/Podklasa/Mlode.java" afterDir="false" />
@@ -154,9 +27,6 @@
       <change beforePath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/Podklasa/Typ/Ryba.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/Podklasa/Typ/Ryba.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/Podklasa/Typ/Ssak.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/Podklasa/Typ/Ssak.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/Zwierze.java" beforeDir="false" afterPath="$PROJECT_DIR$/Zwierzeta/src/main/java/Zwierzeta/Zwierze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +80,7 @@
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+    "settings.editor.selected.configurable": "JavaDoc"
   }
 }]]></component>
   <component name="RunManager">
@@ -231,6 +101,22 @@
       <option name="presentableId" value="Default" />
       <updated>1686921253602</updated>
     </task>
+    <task id="LOCAL-00001" summary="Wersja z komentarzami w JavaDoc, wyczyszonym kodem oraz datagramem klas.">
+      <created>1687466481853</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687466481853</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Wersja z komentarzami w JavaDoc, wyczyszonym kodem oraz datagramem klas." />
+    <option name="LAST_COMMIT_MESSAGE" value="Wersja z komentarzami w JavaDoc, wyczyszonym kodem oraz datagramem klas." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

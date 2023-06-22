@@ -41,10 +41,10 @@ public class Aplikacja extends JFrame {
     /**
      * Instantiates a new Aplikacja.
      *
-     * @param rozmiarOknaX rozmiar okna w wzdłuż osi OX, wyrażona w pixelach
-     * @param rozmiarOknaY rozmiar okna w wzdłuż osi OY, wyrażona w pixelach
-     * @param kafelkiX     liczba kafelek na mapie wzdłuż osi OX
-     * @param kafelkiY     liczba kafelek na mapie wzdłuż osi OY
+     * @param rozmiarOknaX rozmiar okna w wzd&#x142;u&#x17C; osi OX, wyra&#x17C;ona w pixelach
+     * @param rozmiarOknaY rozmiar okna w wzd&#x142;u&#x17C; osi OY, wyra&#x17C;ona w pixelach
+     * @param kafelkiX     liczba kafelek na mapie wzd&#x142;u&#x17C; osi OX
+     * @param kafelkiY     liczba kafelek na mapie wzd&#x142;u&#x17C; osi OY
      */
     public Aplikacja(int rozmiarOknaX,int rozmiarOknaY, int kafelkiX, int kafelkiY) {
         menu=new Menu();
@@ -53,7 +53,7 @@ public class Aplikacja extends JFrame {
     }
 
     /**
-     * Metoda wywoływana po naciśnięciu przycisku "Start" w menu, kopiuje dane zebrane przez menu oraz na ich podstawie wywułuje generacje mapy, tworzenie zwierząt oraz wyświetla okno z symulacją.
+     * Metoda wywo&#x142;ywana po naci&#x15B;ni&#x119;ciu przycisku "Start" w menu, kopiuje dane zebrane przez menu oraz na ich podstawie wywu&#x142;uje generacje mapy, tworzenie zwierz&#x105;t oraz wy&#x15B;wietla okno z symulacj&#x105;.
      */
     private void start(){
         kafelki.x=dane.remove("Szerokosc");
@@ -149,14 +149,14 @@ public class Aplikacja extends JFrame {
     }
 
     /**
-     * Zmienia stan zmiennej pauza - odpowiadającej za nie wykonywanie się pętli Aplikacji
+     * Zmienia stan zmiennej pauza - odpowiadaj&#x105;cej za nie wykonywanie si&#x119; p&#x119;tli Aplikacji
      */
     private void stop(){
         pauza=!pauza;
     }
 
     /**
-     * Metoda wywoływana co każde wykonanie się pętli, sprawdza czy menu zostało zamknięte (jeżeli tak startuje symulację) albo nakazuje wykonanie pętli przez ListaZwierzat oraz Symulacja, jak i rówież malowanie w JFrame symulacji oraz statystyk.
+     * Metoda wywo&#x142;ywana co ka&#x17C;de wykonanie si&#x119; p&#x119;tli, sprawdza czy menu zosta&#x142;o zamkni&#x119;te (je&#x17C;eli tak startuje symulacj&#x119;) albo nakazuje wykonanie p&#x119;tli przez ListaZwierzat oraz Symulacja, jak i r&oacute;wie&#x17C; malowanie w JFrame symulacji oraz statystyk.
      */
     public void rysuj() {
         if(!pauza){
@@ -179,9 +179,9 @@ public class Aplikacja extends JFrame {
     }
 
     /**
-     * Ustawia pętle Aplikacji, jeżeli wejściowe osiweżanie różni sie od aktualnego, usuwa stary Timer i tworzy nowy. Pętla wykonuje metodę rysuj() co określony czas odświerzania, wyrażony w mikrosektunach.
+     * Ustawia p&#x119;tle Aplikacji, je&#x17C;eli wej&#x15B;ciowe osiwe&#x17C;anie r&oacute;&#x17C;ni sie od aktualnego, usuwa stary Timer i tworzy nowy. P&#x119;tla wykonuje metod&#x119; rysuj() co okre&#x15B;lony czas od&#x15B;wierzania, wyra&#x17C;ony w mikrosektunach.
      *
-     * @param odswiezanie1 nowe odświerzanie pętli wyrażone w mikrosekundach
+     * @param odswiezanie1 nowe od&#x15B;wierzanie p&#x119;tli wyra&#x17C;one w mikrosekundach
      */
     public void ustawPetle(Integer odswiezanie1) {
         petla=new Timer();
@@ -198,7 +198,7 @@ public class Aplikacja extends JFrame {
     }
 
     /**
-     * Metoda stopuje symulację, tworzy nowe okno - Podsumowanie, zawierajace końcoweStatystki, po czym usuwa aplikację.
+     * Metoda stopuje symulacj&#x119;, tworzy nowe okno - Podsumowanie, zawierajace ko&#x144;coweStatystki, po czym usuwa aplikacj&#x119;.
      */
     private void koniec(){
         System.out.println("nice");

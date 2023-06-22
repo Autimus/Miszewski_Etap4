@@ -26,13 +26,13 @@ public class Mlode extends Zwierze {
     /**
      * Instantiates a new Mlode.
      *
-     * @param wstepne  wstępne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafikę.
-     * @param szybkosc szybkosc - ile pól jest w stanei przejśc co turę
+     * @param wstepne  wst&#x119;pne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafik&#x119;.
+     * @param szybkosc szybkosc - ile p&oacute;l jest w stanei przej&#x15B;c co tur&#x119;
      * @param sila     sila - wykorzystywana w walce z innymi zwierzeciami
-     * @param rozmiar  rozmiar - wplywa na ilość zjadanego pożywienia
-     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze może jeść mięso albo rośliny
+     * @param rozmiar  rozmiar - wplywa na ilo&#x15B;&#x107; zjadanego po&#x17C;ywienia
+     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze mo&#x17C;e je&#x15B;&#x107; mi&#x119;so albo ro&#x15B;liny
      * @param typ         Enum TypMlodych
-     * @param kolejnyEtap Gatunek zwierzęcia gdy dorośnie
+     * @param kolejnyEtap Gatunek zwierz&#x119;cia gdy doro&#x15B;nie
      * @param dorastanie  ile tur zajmuje dorastanie
      */
     public Mlode(Zwierze wstepne, int szybkosc, int sila, float rozmiar, Jedzenie coJe, TypMlodych typ, String kolejnyEtap, int dorastanie) {

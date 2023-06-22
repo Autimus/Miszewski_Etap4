@@ -26,7 +26,7 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     private static int liczbaPorzatkowa=0;
     private final Koordy kafelki;
     /**
-     * Mapa zawierająca nazwy gatunków oraz ich liczebność.
+     * Mapa zawieraj&#x105;ca nazwy gatunk&oacute;w oraz ich liczebno&#x15B;&#x107;.
      */
     public static Map<String, Integer> iloscZwierzat = new HashMap<>();
     private final List<Integer> doUsuniecia=new ArrayList<>();
@@ -39,10 +39,10 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     /**
      * Instantiates a new Lista zwierzat.
      *
-     * @param kafelki  rozmiar mapy typu Koordy, określający z ilu kafelek składa się mapa w wymiarze X oraz Y
-     * @param listaPol lista wszystkich pól z których składa się mapa
-     * @param polaWody współrzędne wszystkich pól wody na mapie
-     * @param jedzenie ile zwierzęta muszą jeść co turę (wyrażone w ułamku ich wielkości)
+     * @param kafelki  rozmiar mapy typu Koordy, okre&#x15B;laj&#x105;cy z ilu kafelek sk&#x142;ada si&#x119; mapa w wymiarze X oraz Y
+     * @param listaPol lista wszystkich p&oacute;l z kt&oacute;rych sk&#x142;ada si&#x119; mapa
+     * @param polaWody wsp&oacute;&#x142;rz&#x119;dne wszystkich p&oacute;l wody na mapie
+     * @param jedzenie ile zwierz&#x119;ta musz&#x105; je&#x15B;&#x107; co tur&#x119; (wyra&#x17C;one w u&#x142;amku ich wielko&#x15B;ci)
      */
     public ListaZwierzat(Koordy kafelki,List<Pole> listaPol,List<Koordy> polaWody,float jedzenie) {
         this.listaPol=listaPol;
@@ -55,10 +55,10 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     }
 
     /**
-     * Tworzy nowe zwierze w wskazanym miejscu o określonym gatunku. Gatunek wpływa na statystyki zwierzęcia i jego klasę. Utworzenie zwierzęcia jest komunikowane w terminalu.
+     * Tworzy nowe zwierze w wskazanym miejscu o okre&#x15B;lonym gatunku. Gatunek wp&#x142;ywa na statystyki zwierz&#x119;cia i jego klas&#x119;. Utworzenie zwierz&#x119;cia jest komunikowane w terminalu.
      *
-     * @param gdzie   współrzędne na mapie
-     * @param gatunek gatunek nowo tworzsonego zwierzęcia. Przy podaniu 2 stringów, drugi oznacza kolejny etap rozwoju (potrzebne przy tworzeniu młodych zwierząt)
+     * @param gdzie   wsp&oacute;&#x142;rz&#x119;dne na mapie
+     * @param gatunek gatunek nowo tworzsonego zwierz&#x119;cia. Przy podaniu 2 string&oacute;w, drugi oznacza kolejny etap rozwoju (potrzebne przy tworzeniu m&#x142;odych zwierz&#x105;t)
      */
     public void stworzZwierze(Koordy gdzie, String... gatunek){
         String jakie=gatunek[0];
@@ -238,11 +238,11 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     }
 
     /**
-     * Wyszukiwuje współrzędne na mapie dla wybranego zwierze oraz warunek. Wyszukiwane jest miejsce w zasięgu szybkości zwierzęcia, spełniające zadany warunek.
+     * Wyszukiwuje wsp&oacute;&#x142;rz&#x119;dne na mapie dla wybranego zwierze oraz warunek. Wyszukiwane jest miejsce w zasi&#x119;gu szybko&#x15B;ci zwierz&#x119;cia, spe&#x142;niaj&#x105;ce zadany warunek.
      * @param zwierze Zwierze
      * @param warunek Predicate
-     * @return Pierwsze pole spełniające zadany warunek, znajdujące się w zasięgu szybkości zwierzęcia. Jeżeli takie pole nie istnieje zwraca new Koordy(), czyli Koordy o danych: x=-1, y=-1.
-     * @param <T> parametr mogący przyjmować typ Pole albo Zwierze, w zależnosći od potrzeb wyszukiwania
+     * @return Pierwsze pole spe&#x142;niaj&#x105;ce zadany warunek, znajduj&#x105;ce si&#x119; w zasi&#x119;gu szybko&#x15B;ci zwierz&#x119;cia. Je&#x17C;eli takie pole nie istnieje zwraca new Koordy(), czyli Koordy o danych: x=-1, y=-1.
+     * @param <T> parametr mog&#x105;cy przyjmowa&#x107; typ Pole albo Zwierze, w zale&#x17C;nos&#x107;i od potrzeb wyszukiwania
      */
     private <T> Koordy wyszukiwanie(Zwierze zwierze,Predicate<T> warunek){
         try{
@@ -259,9 +259,9 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     }
 
     /**
-     * Na podstawie ilości jedzenia zwierzęcia oraz okolicznych zwierząt, podejmuje decyzje jakiego pola chce szukać, a w końcu na jakie pole się przesunie.
+     * Na podstawie ilo&#x15B;ci jedzenia zwierz&#x119;cia oraz okolicznych zwierz&#x105;t, podejmuje decyzje jakiego pola chce szuka&#x107;, a w ko&#x144;cu na jakie pole si&#x119; przesunie.
      * @param zwierze Zwierze
-     * @return współrzędne na które ma się przesunąć zwierze. Może się zdarzyć że jest takie samo jak obecne miejsce przebywania zwierzęcia.
+     * @return wsp&oacute;&#x142;rz&#x119;dne na kt&oacute;re ma si&#x119; przesun&#x105;&#x107; zwierze. Mo&#x17C;e si&#x119; zdarzy&#x107; &#x17C;e jest takie samo jak obecne miejsce przebywania zwierz&#x119;cia.
      */
 
     private Koordy decyzjaGdzieIdzie(Zwierze zwierze){
@@ -299,7 +299,7 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     }
 
     /**
-     * Każde zwierze wykonuje ruch, po czym akcję na polu na którym się znajduję (w zależności jakie inne zwierzęta się na nim znajdują). następnie zwierze jest postarzane i musi zjeść określoną ilość jedzenia, aby przeżyć.
+     * Ka&#x17C;de zwierze wykonuje ruch, po czym akcj&#x119; na polu na kt&oacute;rym si&#x119; znajduj&#x119; (w zale&#x17C;no&#x15B;ci jakie inne zwierz&#x119;ta si&#x119; na nim znajduj&#x105;). nast&#x119;pnie zwierze jest postarzane i musi zje&#x15B;&#x107; okre&#x15B;lon&#x105; ilo&#x15B;&#x107; jedzenia, aby prze&#x17C;y&#x107;.
      */
     public synchronized void wykonajPetle(){
         lista.addAll(tymczasowa);
@@ -367,7 +367,7 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     }
 
     /**
-     * Dorosłe zwierze przekazuje jedzenie młodemu zwierzęciu z tego samego gatunku
+     * Doros&#x142;e zwierze przekazuje jedzenie m&#x142;odemu zwierz&#x119;ciu z tego samego gatunku
      * @param dorosle
      * @param mlode
      */
@@ -377,8 +377,8 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     }
 
     /**
-     * Dwa gatunki zwierząt walczą ze sobą. Ta grupa która ma w sumie większą siłę wygrywa. Przegrani umierają, jeżeli zwyciężcy nie są roślinożercami, odrazu zjadają przegranych. W przypadku remisów nikt nie wygrywa.
-     * @param walczacy lista zwierząt walczących ze sobą na danym polu
+     * Dwa gatunki zwierz&#x105;t walcz&#x105; ze sob&#x105;. Ta grupa kt&oacute;ra ma w sumie wi&#x119;ksz&#x105; si&#x142;&#x119; wygrywa. Przegrani umieraj&#x105;, je&#x17C;eli zwyci&#x119;&#x17C;cy nie s&#x105; ro&#x15B;lino&#x17C;ercami, odrazu zjadaj&#x105; przegranych. W przypadku remis&oacute;w nikt nie wygrywa.
+     * @param walczacy lista zwierz&#x105;t walcz&#x105;cych ze sob&#x105; na danym polu
      */
     private void walka(Map<String,List<Zwierze>> walczacy) {
         String[] id=walczacy.keySet().toArray(new String[0]);
@@ -430,7 +430,7 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     }
 
     /**
-     * Dwa dorosłe zwierzęcia, tego samego gatunku, tworzą nowe młodę zwierzę.
+     * Dwa doros&#x142;e zwierz&#x119;cia, tego samego gatunku, tworz&#x105; nowe m&#x142;od&#x119; zwierz&#x119;.
      * @param zwierze1
      * @param zwierze2
      */
@@ -446,7 +446,7 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     }
 
     /**
-     * Usuwa zwierzęcia z listy zwierząt.
+     * Usuwa zwierz&#x119;cia z listy zwierz&#x105;t.
      */
     private void usun(){
         for (Integer id:doUsuniecia) {
@@ -456,7 +456,7 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     }
 
     /**
-     * Zwierze dorasta, czyli zostaje usunięte, a na jego miejsce powstaje zwierze o kolejnym etapie rozwoju.
+     * Zwierze dorasta, czyli zostaje usuni&#x119;te, a na jego miejsce powstaje zwierze o kolejnym etapie rozwoju.
      * @param zwierze
      */
     private void dorosnij(Mlode zwierze){
@@ -475,7 +475,7 @@ public class ListaZwierzat implements Iterable<Zwierze>{
     }
 
     /**
-     * Pozwala na iterację ListaZwierzat po jej lista.
+     * Pozwala na iteracj&#x119; ListaZwierzat po jej lista.
      */
     class IteratorListyZwierzat implements Iterator<Zwierze>{
         private int id=0;

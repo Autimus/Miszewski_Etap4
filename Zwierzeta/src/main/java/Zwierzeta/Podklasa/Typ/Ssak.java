@@ -10,19 +10,19 @@ import Zwierzeta.Zwierze;
  */
 public class Ssak extends Dorosle {
     /**
-     * Po reprodukcji ssaki nie tworzą nowego zwierzęcia od razu, tylko dopiero po upływie czasu wyrażonego jako liczba tur w tej zmiennej.
+     * Po reprodukcji ssaki nie tworz&#x105; nowego zwierz&#x119;cia od razu, tylko dopiero po up&#x142;ywie czasu wyra&#x17C;onego jako liczba tur w tej zmiennej.
      */
     public int ciaza=-1;
 
     /**
      * Instantiates a new Ssak.
      *
-     * @param wstepne  wstępne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafikę.
-     * @param szybkosc szybkosc - ile pól jest w stanei przejśc co turę
+     * @param wstepne  wst&#x119;pne zwierze, zawierajace jedynie id, wiek, miejsce oraz grafik&#x119;.
+     * @param szybkosc szybkosc - ile p&oacute;l jest w stanei przej&#x15B;c co tur&#x119;
      * @param sila     sila - wykorzystywana w walce z innymi zwierzeciami
-     * @param rozmiar  rozmiar - wplywa na ilość zjadanego pożywienia
-     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze może jeść mięso albo rośliny
-     * @param dlugoscZycia ile tur od utworzenia do śmierci ze starości
+     * @param rozmiar  rozmiar - wplywa na ilo&#x15B;&#x107; zjadanego po&#x17C;ywienia
+     * @param coJe     co je - Enum Jedzenie. Ustala czy zwierze mo&#x17C;e je&#x15B;&#x107; mi&#x119;so albo ro&#x15B;liny
+     * @param dlugoscZycia ile tur od utworzenia do &#x15B;mierci ze staro&#x15B;ci
      * @param gatunek      Enum Gatunek
      */
     public Ssak(Zwierze wstepne, int szybkosc, int sila, float rozmiar, Jedzenie coJe, int dlugoscZycia, Gatunek gatunek) {
@@ -30,7 +30,7 @@ public class Ssak extends Dorosle {
     }
 
     /**
-     * Jeżeli ciąża dobiegła końca, tworzy nowego młodego ssaka.
+     * Je&#x17C;eli ci&#x105;&#x17C;a dobieg&#x142;a ko&#x144;ca, tworzy nowego m&#x142;odego ssaka.
      *
      * @return the boolean
      */

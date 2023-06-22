@@ -23,7 +23,7 @@ public class Statystyki extends JPanel{
     /**
      * Instantiates a new Statystyki.
      *
-     * @param rozmiarOkna rozmiar okna typu Koordy, zawiera wymiary okna Aplikacji wyrażone w pixelach
+     * @param rozmiarOkna rozmiar okna typu Koordy, zawiera wymiary okna Aplikacji wyra&#x17C;one w pixelach
      */
     public Statystyki(Koordy rozmiarOkna) {
         rozmiarStatystyk= new Koordy((int)(rozmiarOkna.x*0.2),(int)(rozmiarOkna.y*0.75));
