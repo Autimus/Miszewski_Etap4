@@ -1,5 +1,39 @@
 package Pomocnicze;
 
+/**
+ * The enum Plemiona.
+ */
 public enum Plemiona {
-    Tukano, Yawanawa, Kaxinawa, Nukini, Puyanawa, Katukina, Kuntanawa, Shawadawa
+    /**
+     * Tukano plemiona.
+     */
+    Tukano,
+    /**
+     * Yawanawa plemiona.
+     */
+    Yawanawa,
+    /**
+     * Kaxinawa plemiona.
+     */
+    Kaxinawa,
+    /**
+     * Nukini plemiona.
+     */
+    Nukini,
+    /**
+     * Puyanawa plemiona.
+     */
+    Puyanawa,
+    /**
+     * Katukina plemiona.
+     */
+    Katukina,
+    /**
+     * Kuntanawa plemiona.
+     */
+    Kuntanawa,
+    /**
+     * Shawadawa plemiona.
+     */
+    Shawadawa
 }

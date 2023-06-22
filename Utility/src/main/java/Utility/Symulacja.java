@@ -11,24 +11,45 @@ import java.util.List;
 import javax.swing.*;
 
 import static Pomocnicze.TypPola.Woda;
+import static Utility.Aplikacja.listaZwierzat;
 
+/**
+ * The type Symulacja.
+ */
 public class Symulacja extends JPanel {
-    private Koordy rozmiarSymulacji ,kafelki, rozmiarKafelek;
-    //    TypPola[][] mapa;
-    public static List<Pole> listaPol=new ArrayList<>();
-    List<Koordy> polaWody=new ArrayList<>();
-    private List<Zwierze> listaZwierzat;
+    private Koordy rozmiarSymulacji;
+    private final Koordy kafelki;
+    private final Koordy rozmiarKafelek;
+    /**
+     * The Lista pol.
+     */
+    public List<Pole> listaPol=new ArrayList<>();
+    /**
+     * The Pola wody.
+     */
+    public List<Koordy> polaWody=new ArrayList<>();
     private boolean zwloki;
 
+    /**
+     * Instantiates a new Symulacja.
+     *
+     * @param rozmiarOkna rozmiar okna typu Koordy, zawiera wymiary okna Aplikacji wyrażone w pixelach
+     * @param kafelki     rozmiar mapy typu Koordy, określający z ilu kafelek składa się mapa w wymiarze X oraz Y
+     */
     public Symulacja(Koordy rozmiarOkna, Koordy kafelki) {
         this.rozmiarSymulacji=new Koordy((int)(rozmiarOkna.x*0.8),rozmiarOkna.y-41);
         this.rozmiarSymulacji=new Koordy(rozmiarSymulacji.x- rozmiarSymulacji.x% kafelki.x, rozmiarSymulacji.y- rozmiarSymulacji.y% kafelki.y);
         setPreferredSize(new Dimension(rozmiarSymulacji.x+2, rozmiarSymulacji.y+2));
         this.kafelki = kafelki;
         this.rozmiarKafelek=new Koordy(rozmiarSymulacji.x/kafelki.x, rozmiarSymulacji.y/kafelki.y);
-//        this.mapa=new TypPola[kafelki.y][kafelki.x];
         this.generujMape();
     }
+
+    /**
+     * Rysuje wszystkie pola mapy oraz linie oddzielajace.
+     *
+     * @param g the Graphics g
+     */
     public void rysujKafelki(Graphics g){
         for(Pole kafelek: listaPol){
             g.setColor(kafelek.getKolor());
@@ -42,6 +63,10 @@ public class Symulacja extends JPanel {
             g.drawLine(0,i*rozmiarKafelek.y,rozmiarSymulacji.x,i*rozmiarKafelek.y);
         }
     }
+
+    /**
+     * Generuję nową losową mapę na podstawie wymiarów okna oraz mapy. Lokalizacja oraz typ pol są losowe, lecz pola wody mogą występować jedynie obok innego pola wody.
+     */
     private void generujMape(){
         java.util.List<Koordy> pustePola=new ArrayList<>();
         for (int x=0;x< kafelki.x;x++){
@@ -70,7 +95,7 @@ public class Symulacja extends JPanel {
                         for(int[] sasiad: sasiedzi){
                             try{
                                 pustePolaObokWody.add(pustePola.get(pustePola.indexOf(new Koordy(poleWody.x+sasiad[0],poleWody.y+sasiad[1]))));
-                            }catch(Exception e){}
+                            }catch(Exception ignored){}
                         }
                     }
                     if(pustePolaObokWody.size()==0)
@@ -87,6 +112,12 @@ public class Symulacja extends JPanel {
         }
         listaPol.sort((pole1,pole2)-> pole1.getId()- pole2.getId());
     }
+
+    /**
+     * Tworzy nowe Pole, nadaje mu odpowiednie statystyki na podstawie jego typu.
+     * @param gdzie lokalizacja tworzonego miejsca typu Koordy
+     * @param typ typ tworzonego Pola (wartosć Enum TypPola)
+     */
     private void stworzPole(Koordy gdzie, TypPola typ){
         Color kolor=new Color(255,255,255);
         float ileGeneruje=0.5f;
@@ -117,20 +148,28 @@ public class Symulacja extends JPanel {
         }
         listaPol.add(new Pole(gdzie.x+ gdzie.y*kafelki.y,typ,gdzie,ileGeneruje,czasGeneracji,kolor));
     }
+
+    /**
+     * Rysuje wszystkie zwierzęta z stałej zmiennej listaZwierząt zaimportowanej z Utility.Aplikacja.
+     *
+     * @param g the Graphics g
+     */
     public synchronized void rysujZwierzeta(Graphics g) {
-//   if(listaZwierzat != null)
         try {
             for (Zwierze zwierze : listaZwierzat) {
                 if(zwloki || zwierze.czyZyje())
-                g.drawImage((new ImageIcon("Utility/src/main/resources/" + zwierze.getGrafika())).getImage(),
+                    g.drawImage((new ImageIcon("Utility/src/main/resources/" + zwierze.getGrafika())).getImage(),
                         rozmiarKafelek.x * zwierze.getMiejsce().x, rozmiarKafelek.y * zwierze.getMiejsce().y, rozmiarKafelek.x, rozmiarKafelek.y, this);
             }
-        }catch (Exception e){}
-    }
-    public void sendListaZwierzat(List<Zwierze> listaZwierzat){
-        this.listaZwierzat=listaZwierzat;
+        }catch (Exception ignored){}
     }
 
+    /**
+     * Wykonaj petle.
+     *
+     * @param tura   obecna tura - int
+     * @param zwloki wyraża czy wyświetlać na symulacji zwloki zwierząt
+     */
     public synchronized void wykonajPetle(int tura,boolean zwloki){
         this.zwloki = zwloki;
         for (Pole pole: this.listaPol) {
@@ -139,6 +178,10 @@ public class Symulacja extends JPanel {
         }
     }
 
+    /**
+     * Przy każdym wywołaniu paint albo repaint maluje mapę symulacji oraz zwierzęta, korzystajac z metod rysujKafelki() oraz rysujZwierzeta()
+     * @param grap the <code>Graphics</code> object to protect
+     */
     @Override
     protected void paintComponent(Graphics grap) {
         super.paintComponent(grap);

@@ -4,15 +4,18 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.Map;
 
+/**
+ * The type Podsumowanie.
+ */
 public class Podsumowanie extends JFrame {
+    /**
+     * Instantiates a new Podsumowanie. Tworzy nowe okno wyswietlajace uzbierane statystyki końcowe. Zamknięcie okna oznacza zakończenie programu.
+     *
+     * @param dane statystyki końcowe zbierane przez Aplikację
+     */
     public Podsumowanie(Map<String,Float> dane){
         JPanel centrum = new JPanel();
         setContentPane(centrum);
-//        centrum.setBounds(0,0,800,600);
-//        centrum.setMaximumSize(new Dimension(800,600));
-//        centrum.setMinimumSize(new Dimension(800,600));
-//        centrum.setSize(new Dimension(800,600));
-//        centrum.setPreferredSize(new Dimension(800,600));
         centrum.setLayout(new BoxLayout(centrum,BoxLayout.Y_AXIS));
         setSize(800,600);
         setTitle("Plemiona Amazonki");

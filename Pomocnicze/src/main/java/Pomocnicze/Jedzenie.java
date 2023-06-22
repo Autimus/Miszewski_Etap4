@@ -1,5 +1,19 @@
 package Pomocnicze;
 
+/**
+ * The enum Jedzenie.
+ */
 public enum Jedzenie {
-    Rosliny, Mieso, Wszystko
+    /**
+     * Rosliny jedzenie.
+     */
+    Rosliny,
+    /**
+     * Mieso jedzenie.
+     */
+    Mieso,
+    /**
+     * Wszystko jedzenie.
+     */
+    Wszystko
 }

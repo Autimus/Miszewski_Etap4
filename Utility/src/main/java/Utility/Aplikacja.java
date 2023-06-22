@@ -2,42 +2,59 @@ package Utility;
 
 import Pomocnicze.Koordy;
 import Zwierzeta.ListaZwierzat;
-import Zwierzeta.Zwierze;
 
 import javax.swing.*;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.*;
 import java.util.Timer;
+import java.util.*;
 
+import static Zwierzeta.ListaZwierzat.koncoweStatystyki;
+
+/**
+ * The type Aplikacja.
+ */
 public class Aplikacja extends JFrame {
-    private Menu menu;
-    private Podsumowanie podsumowanie;
-    private Koordy rozmiarOkna,kafelki;
-    public ListaZwierzat listaZwierzat;
+    private final Menu menu;
+    private final Koordy rozmiarOkna;
+    private final Koordy kafelki;
+    /**
+     * The constant listaZwierzat.
+     */
+    public static ListaZwierzat listaZwierzat;
     private boolean menuZamkniete=false;
     private boolean pauza=false;
     private boolean czyZwloki = true;
     private Integer odswiezanie=1000;
     private Map<String,Integer> dane;
+    /**
+     * The Tura.
+     */
     static int tura=0;
-    public static Map<String, Float> koncoweStatystyki =new HashMap<>();
     private Timer petla;
     private Symulacja symulacja;
     private Statystyki statystyki;
-    private JPanel panelBoczny;
 
     private JSlider predkoscOdswierzania;
+
+    /**
+     * Instantiates a new Aplikacja.
+     *
+     * @param rozmiarOknaX rozmiar okna w wzdłuż osi OX, wyrażona w pixelach
+     * @param rozmiarOknaY rozmiar okna w wzdłuż osi OY, wyrażona w pixelach
+     * @param kafelkiX     liczba kafelek na mapie wzdłuż osi OX
+     * @param kafelkiY     liczba kafelek na mapie wzdłuż osi OY
+     */
     public Aplikacja(int rozmiarOknaX,int rozmiarOknaY, int kafelkiX, int kafelkiY) {
         menu=new Menu();
         rozmiarOkna=new Koordy(rozmiarOknaX,rozmiarOknaY);
         kafelki=new Koordy(kafelkiX,kafelkiY);
     }
+
+    /**
+     * Metoda wywoływana po naciśnięciu przycisku "Start" w menu, kopiuje dane zebrane przez menu oraz na ich podstawie wywułuje generacje mapy, tworzenie zwierząt oraz wyświetla okno z symulacją.
+     */
     private void start(){
         kafelki.x=dane.remove("Szerokosc");
         kafelki.y=dane.remove("Wysokosc");
@@ -49,11 +66,11 @@ public class Aplikacja extends JFrame {
             koncoweStatystyki.put(stat,0F);
 
         symulacja=new Symulacja(rozmiarOkna,kafelki);
-        listaZwierzat=new ListaZwierzat(kafelki,symulacja.polaWody,jedzenie);
+        listaZwierzat=new ListaZwierzat(kafelki,symulacja.listaPol,symulacja.polaWody,jedzenie);
         for (Object wpis: dane.entrySet().toArray()) {
             String[] pomoc =wpis.toString().split("=");
-            for(int i=0;i<Integer.valueOf(pomoc[1]);i++) {
-                listaZwierzat.stworzZwierze(new Koordy().losoweMiejsce(kafelki.x, kafelki.y), pomoc[0]);
+            for(int i = 0; i<Integer.parseInt(pomoc[1]); i++) {
+                listaZwierzat.stworzZwierze(new Koordy().losoweMiejsce(kafelki.x, kafelki.y),pomoc[0]);
             }
         }
         statystyki=new Statystyki(rozmiarOkna);
@@ -71,36 +88,26 @@ public class Aplikacja extends JFrame {
         podpisy.put(6, new JLabel("10s"));
         predkoscOdswierzania.setLabelTable(podpisy);
         predkoscOdswierzania.setPaintLabels(true);
-        predkoscOdswierzania.addChangeListener(new ChangeListener() {
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                float[] predkosci= {1/10F,1/5F,1/2F,1,2,5,10};
-                System.out.println((int)(predkosci[predkoscOdswierzania.getValue()]*1000));
-                petla.cancel();
-                ustawPetle((int)(predkosci[predkoscOdswierzania.getValue()]*1000));
-            }
+        predkoscOdswierzania.addChangeListener(e -> {
+            float[] predkosci= {1/10F,1/5F,1/2F,1,2,5,10};
+            System.out.println((int)(predkosci[predkoscOdswierzania.getValue()]*1000));
+            petla.cancel();
+            ustawPetle((int)(predkosci[predkoscOdswierzania.getValue()]*1000));
         });
 
         JLabel opisPredkosci =new JLabel("Czas miedzy turami:");
         opisPredkosci.setMaximumSize(new Dimension(500,10));
         opisPredkosci.setMinimumSize(new Dimension(500,10));
-//        opisPredkosci.setPreferredSize(new Dimension(500,10));
-//        opisPredkosci.setSize(new Dimension(500,10));
         opisPredkosci.setAlignmentX(Component.RIGHT_ALIGNMENT);
 
         JButton stop=new JButton("STOP");
-//        stop.setMinimumSize(new Dimension(100,100));
-//        stop.setSize(new Dimension(100,100));
         stop.setMargin(new Insets(0,0,0,0));
         stop.setFont(new Font("Arial",Font.BOLD,15));
         stop.setMaximumSize(new Dimension(100,50));
         stop.setPreferredSize(new Dimension(80,40));
-        stop.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                stop.setText((stop.getText()=="STOP")?"START":"STOP");
-                stop();
-            }
+        stop.addActionListener(e -> {
+            stop.setText((Objects.equals(stop.getText(), "STOP"))?"START":"STOP");
+            stop();
         });
 
         Image grafika = new ImageIcon("Utility/src/main/resources/smierc.png").getImage().getScaledInstance(50,50,Image.SCALE_SMOOTH);
@@ -108,17 +115,11 @@ public class Aplikacja extends JFrame {
         zwloki.setMaximumSize(new Dimension(50,50));
         zwloki.setPreferredSize(new Dimension(50,50));
 
-        zwloki.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                czyZwloki=!czyZwloki;
-            }
-        });
+        zwloki.addActionListener(e -> czyZwloki=!czyZwloki);
 
-        panelBoczny = new JPanel();
+        JPanel panelBoczny = new JPanel();
         panelBoczny.setLayout(new BoxLayout(panelBoczny,BoxLayout.Y_AXIS));
         panelBoczny.revalidate();
-//        panelBoczny.setLayout(new BorderLayout());
         panelBoczny.add(statystyki);
         panelBoczny.add(opisPredkosci);
         panelBoczny.add(predkoscOdswierzania);
@@ -136,7 +137,6 @@ public class Aplikacja extends JFrame {
         setSize(rozmiarOkna.x,rozmiarOkna.y);
         setTitle("Plemiona Amazonki");
         setDefaultCloseOperation(HIDE_ON_CLOSE);
-//        setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
 
@@ -147,9 +147,17 @@ public class Aplikacja extends JFrame {
             }
         });
     }
+
+    /**
+     * Zmienia stan zmiennej pauza - odpowiadającej za nie wykonywanie się pętli Aplikacji
+     */
     private void stop(){
         pauza=!pauza;
     }
+
+    /**
+     * Metoda wywoływana co każde wykonanie się pętli, sprawdza czy menu zostało zamknięte (jeżeli tak startuje symulację) albo nakazuje wykonanie pętli przez ListaZwierzat oraz Symulacja, jak i rówież malowanie w JFrame symulacji oraz statystyk.
+     */
     public void rysuj() {
         if(!pauza){
             if (!menuZamkniete && !menu.isVisible()) {
@@ -158,19 +166,24 @@ public class Aplikacja extends JFrame {
                 menu.dispose();
                 start();
             }else if (menuZamkniete) {
-                this.tura+=1;
+                tura+=1;
                 listaZwierzat.wykonajPetle();
-                symulacja.sendListaZwierzat(listaZwierzat.getLista());
-                symulacja.wykonajPetle(this.tura,czyZwloki);
+                symulacja.wykonajPetle(tura,czyZwloki);
                 symulacja.repaint();
                 statystyki.repaint();
-                int sumaZwierzat=listaZwierzat.iloscZwierzat.values().stream().mapToInt(Integer::intValue).sum();
+                int sumaZwierzat= ListaZwierzat.iloscZwierzat.values().stream().mapToInt(Integer::intValue).sum();
                 if(sumaZwierzat==0 || sumaZwierzat>=10000)
                     koniec();
             }
         }
     }
-    void ustawPetle(Integer odswiezanie1) {
+
+    /**
+     * Ustawia pętle Aplikacji, jeżeli wejściowe osiweżanie różni sie od aktualnego, usuwa stary Timer i tworzy nowy. Pętla wykonuje metodę rysuj() co określony czas odświerzania, wyrażony w mikrosektunach.
+     *
+     * @param odswiezanie1 nowe odświerzanie pętli wyrażone w mikrosekundach
+     */
+    public void ustawPetle(Integer odswiezanie1) {
         petla=new Timer();
         petla.schedule(new TimerTask() {
             public void run() {
@@ -183,11 +196,15 @@ public class Aplikacja extends JFrame {
             }
         }, 0, odswiezanie);
     }
+
+    /**
+     * Metoda stopuje symulację, tworzy nowe okno - Podsumowanie, zawierajace końcoweStatystki, po czym usuwa aplikację.
+     */
     private void koniec(){
         System.out.println("nice");
         stop();
         koncoweStatystyki.put("Tury",Float.parseFloat(Integer.toString(tura)));
-        this.podsumowanie=new Podsumowanie(koncoweStatystyki);
+        new Podsumowanie(koncoweStatystyki);
         dispose();
     }
 

@@ -1,7 +1,18 @@
 package org.example;
 
+import Utility.Aplikacja;
+
+/**
+ * The type Main.
+ */
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    /**
+     * Tworzy obiekt klasy Aplikacja i ustawia w nim pętlę o okresie 1s
+     *
+     * @param args the args
+     */
+    public static void main(String[] args){
+        Aplikacja app = new Aplikacja(800,600,20,20);
+        app.ustawPetle(1000);
     }
 }

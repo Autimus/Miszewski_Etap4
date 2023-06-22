@@ -11,30 +11,56 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 import static Pomocnicze.Jedzenie.*;
-import static Utility.Aplikacja.koncoweStatystyki;
-import static Utility.Symulacja.listaPol;
 
-public class ListaZwierzat {
+/**
+ * The type Lista zwierzat.
+ */
+public class ListaZwierzat implements Iterable<Zwierze>{
+    /**
+     * The Lista.
+     */
     public List<Zwierze> lista =new ArrayList<>();
-    private List<Zwierze> tymczasowa =new ArrayList<>();
-    private List<Koordy> polaWody;
+    private final List<Zwierze> tymczasowa =new ArrayList<>();
+    private final List<Koordy> polaWody;
+    private final List<Pole> listaPol;
     private static int liczbaPorzatkowa=0;
-    private Koordy kafelki;
+    private final Koordy kafelki;
+    /**
+     * Mapa zawierająca nazwy gatunków oraz ich liczebność.
+     */
     public static Map<String, Integer> iloscZwierzat = new HashMap<>();
-    private List<Integer> doUsuniecia=new ArrayList<>();
-    private float ileJedzaCoTure;
+    private final List<Integer> doUsuniecia=new ArrayList<>();
+    private final float ileJedzaCoTure;
+    /**
+     * The constant koncoweStatystyki.
+     */
+    public static Map<String,Float> koncoweStatystyki=new HashMap<>();
 
-    public ListaZwierzat(Koordy kafelki,List<Koordy> polaWody,float jedzenie) {
+    /**
+     * Instantiates a new Lista zwierzat.
+     *
+     * @param kafelki  rozmiar mapy typu Koordy, określający z ilu kafelek składa się mapa w wymiarze X oraz Y
+     * @param listaPol lista wszystkich pól z których składa się mapa
+     * @param polaWody współrzędne wszystkich pól wody na mapie
+     * @param jedzenie ile zwierzęta muszą jeść co turę (wyrażone w ułamku ich wielkości)
+     */
+    public ListaZwierzat(Koordy kafelki,List<Pole> listaPol,List<Koordy> polaWody,float jedzenie) {
+        this.listaPol=listaPol;
         this.polaWody = polaWody;
         this.kafelki=kafelki;
         this.ileJedzaCoTure=jedzenie;
         for (Object zwierze: Stream.concat(Stream.concat(Arrays.stream(Gatunek.values()),Arrays.stream(TypMlodych.values())),Arrays.stream(Plemiona.values())).toArray()) {
             iloscZwierzat.put(zwierze.toString(),0);
         }
-//        System.out.println(iloscZwierzat.toString());
     }
 
-    public int stworzZwierze(Koordy gdzie, String... gatunek){
+    /**
+     * Tworzy nowe zwierze w wskazanym miejscu o określonym gatunku. Gatunek wpływa na statystyki zwierzęcia i jego klasę. Utworzenie zwierzęcia jest komunikowane w terminalu.
+     *
+     * @param gdzie   współrzędne na mapie
+     * @param gatunek gatunek nowo tworzsonego zwierzęcia. Przy podaniu 2 stringów, drugi oznacza kolejny etap rozwoju (potrzebne przy tworzeniu młodych zwierząt)
+     */
+    public void stworzZwierze(Koordy gdzie, String... gatunek){
         String jakie=gatunek[0];
         Zwierze zwierze=new Zwierze(liczbaPorzatkowa++,0, gdzie,jakie+".png");
         try {
@@ -136,7 +162,7 @@ public class ListaZwierzat {
                             jedzenie=Rosliny;
                             szybkosc+=2;
                             sila-=10;
-                            rozmiar-=3/4;
+                            rozmiar-=3/4f;
                         }
                     case Drzewica:
                         if (jedzenie==null) {
@@ -194,7 +220,7 @@ public class ListaZwierzat {
                     System.out.println("Tworze "+Plemiona.valueOf(jakie));
                 }catch (Exception exc){
                     System.out.println("Blad w tworzeniu zwierzecia: '"+jakie+"' nie istnieje jako typ, ani gatunek.");
-                    return 0;
+                    return;
                 }
             }
         }
@@ -209,8 +235,15 @@ public class ListaZwierzat {
         if(suma > koncoweStatystyki.get("Maksymalna populacja"))
             koncoweStatystyki.put("Maksymalna populacja",suma);
         tymczasowa.add(zwierze);
-        return 1;
     }
+
+    /**
+     * Wyszukiwuje współrzędne na mapie dla wybranego zwierze oraz warunek. Wyszukiwane jest miejsce w zasięgu szybkości zwierzęcia, spełniające zadany warunek.
+     * @param zwierze Zwierze
+     * @param warunek Predicate
+     * @return Pierwsze pole spełniające zadany warunek, znajdujące się w zasięgu szybkości zwierzęcia. Jeżeli takie pole nie istnieje zwraca new Koordy(), czyli Koordy o danych: x=-1, y=-1.
+     * @param <T> parametr mogący przyjmować typ Pole albo Zwierze, w zależnosći od potrzeb wyszukiwania
+     */
     private <T> Koordy wyszukiwanie(Zwierze zwierze,Predicate<T> warunek){
         try{
             Predicate<Zwierze> konkret = (Predicate<Zwierze>) warunek;
@@ -224,6 +257,12 @@ public class ListaZwierzat {
             return (list.length==0)?new Koordy():((Pole)list[0]).getMiejsce();
         }
     }
+
+    /**
+     * Na podstawie ilości jedzenia zwierzęcia oraz okolicznych zwierząt, podejmuje decyzje jakiego pola chce szukać, a w końcu na jakie pole się przesunie.
+     * @param zwierze Zwierze
+     * @return współrzędne na które ma się przesunąć zwierze. Może się zdarzyć że jest takie samo jak obecne miejsce przebywania zwierzęcia.
+     */
 
     private Koordy decyzjaGdzieIdzie(Zwierze zwierze){
         Koordy miejsce=new Koordy();
@@ -249,7 +288,7 @@ public class ListaZwierzat {
             miejsce=wyszukiwanie(zwierze,(Pole pole1)->(lista.stream().map(Zwierze::getMiejsce).anyMatch(miejsce1->!miejsce1.equals(pole1.getMiejsce()))));
         Random random=new Random();
         if(miejsce.isNull()) {
-            Object[] wZasiegu = listaPol.stream().filter(pole1 -> (pole1.getMiejsce().odleglosc(zwierze.getMiejsce()) <= zwierze.getSzybkosc())).map(Pole::getMiejsce).toArray();
+            Object[] wZasiegu = listaPol.stream().map(Pole::getMiejsce).filter(pole1Miejsce -> (pole1Miejsce.odleglosc(zwierze.getMiejsce()) <= zwierze.getSzybkosc())).toArray();
             if(wZasiegu.length>0)
                 miejsce=(Koordy) wZasiegu[random.nextInt(wZasiegu.length)];
             else
@@ -259,6 +298,9 @@ public class ListaZwierzat {
         return miejsce;
     }
 
+    /**
+     * Każde zwierze wykonuje ruch, po czym akcję na polu na którym się znajduję (w zależności jakie inne zwierzęta się na nim znajdują). następnie zwierze jest postarzane i musi zjeść określoną ilość jedzenia, aby przeżyć.
+     */
     public synchronized void wykonajPetle(){
         lista.addAll(tymczasowa);
         tymczasowa.clear();
@@ -283,22 +325,18 @@ public class ListaZwierzat {
             else{
                 for (Object zwierze1 : obecneZwierzeta) {
                     String klucz = "null";
-//                try{
                     if (zwierze1.getClass() == Czlowiek.class)
                         klucz = ((Czlowiek) zwierze1).plemie.name();
                     else if (zwierze1 instanceof Dorosle)
                         klucz = ((Dorosle) zwierze1).getGatunek().name();
-//                }catch (Exception e1){
                     if (zwierze1.getClass() == Mlode.class)
                         klucz = ((Mlode) zwierze1).getKolejnyEtap();
-//                }
                     if (!liczebnosc.containsKey(klucz)) {
                         if (liczebnosc.size() == 2)
                             continue;
                         liczebnosc.put(klucz, new ArrayList<>());
                     }
                     liczebnosc.get(klucz).add((Zwierze) zwierze1);
-//                    System.out.println(klucz);
                 }
                 if(liczebnosc.size()>=2) {
                     walka(liczebnosc);
@@ -327,10 +365,21 @@ public class ListaZwierzat {
                 reprodukcja((Dorosle) zwierze, (Dorosle) zwierze);
         }
     }
+
+    /**
+     * Dorosłe zwierze przekazuje jedzenie młodemu zwierzęciu z tego samego gatunku
+     * @param dorosle
+     * @param mlode
+     */
     private void nakarm(Dorosle dorosle,Mlode mlode){
         mlode.zdobadzJedzenie(dorosle.getRozmiar()*ileJedzaCoTure);
         dorosle.jedz(ileJedzaCoTure);
     }
+
+    /**
+     * Dwa gatunki zwierząt walczą ze sobą. Ta grupa która ma w sumie większą siłę wygrywa. Przegrani umierają, jeżeli zwyciężcy nie są roślinożercami, odrazu zjadają przegranych. W przypadku remisów nikt nie wygrywa.
+     * @param walczacy lista zwierząt walczących ze sobą na danym polu
+     */
     private void walka(Map<String,List<Zwierze>> walczacy) {
         String[] id=walczacy.keySet().toArray(new String[0]);
         Integer[] sila={walczacy.get(id[0]).stream().mapToInt(Zwierze::getSila).sum(),walczacy.get(id[1]).stream().mapToInt(Zwierze::getSila).sum()};
@@ -379,6 +428,12 @@ public class ListaZwierzat {
             koncoweStatystyki.put("Smierci w walce",koncoweStatystyki.get("Smierci w walce")+1);
         }
     }
+
+    /**
+     * Dwa dorosłe zwierzęcia, tego samego gatunku, tworzą nowe młodę zwierzę.
+     * @param zwierze1
+     * @param zwierze2
+     */
     private void reprodukcja(Dorosle zwierze1,Dorosle zwierze2){
         zwierze1.jedz(ileJedzaCoTure);
         zwierze2.jedz(ileJedzaCoTure);
@@ -389,12 +444,21 @@ public class ListaZwierzat {
             stworzZwierze(zwierze1.getMiejsce(), nazwa + zwierze1.getClass().getSimpleName(), zwierze1.getGatunek().name());
         }
     }
+
+    /**
+     * Usuwa zwierzęcia z listy zwierząt.
+     */
     private void usun(){
         for (Integer id:doUsuniecia) {
             lista.removeIf(zwierze -> zwierze.getId()==id);
         }
         doUsuniecia.clear();
     }
+
+    /**
+     * Zwierze dorasta, czyli zostaje usunięte, a na jego miejsce powstaje zwierze o kolejnym etapie rozwoju.
+     * @param zwierze
+     */
     private void dorosnij(Mlode zwierze){
         String typ = zwierze.getTyp().toString();
         if(typ.contains("Jajko"))
@@ -405,7 +469,24 @@ public class ListaZwierzat {
         doUsuniecia.add(zwierze.getId());
     }
 
-    public List<Zwierze> getLista() {
-        return lista;
+    @Override
+    public Iterator<Zwierze> iterator() {
+        return new IteratorListyZwierzat();
+    }
+
+    /**
+     * Pozwala na iterację ListaZwierzat po jej lista.
+     */
+    class IteratorListyZwierzat implements Iterator<Zwierze>{
+        private int id=0;
+        @Override
+        public boolean hasNext() {
+            return id<lista.size();
+        }
+
+        @Override
+        public Zwierze next() {
+            return lista.get(id++);
+        }
     }
 }

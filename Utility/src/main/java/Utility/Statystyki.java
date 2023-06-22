@@ -1,6 +1,5 @@
 package Utility;
 
-import Pola.Pole;
 import Pomocnicze.Gatunek;
 import Pomocnicze.Koordy;
 import Pomocnicze.Plemiona;
@@ -11,15 +10,23 @@ import java.awt.*;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
-import static Utility.Aplikacja.koncoweStatystyki;
 import static Utility.Aplikacja.tura;
 import static Zwierzeta.ListaZwierzat.iloscZwierzat;
+import static Zwierzeta.ListaZwierzat.koncoweStatystyki;
 
+/**
+ * The type Statystyki.
+ */
 public class Statystyki extends JPanel{
-    private Koordy rozmiarStatystyk;
+    private final Koordy rozmiarStatystyk;
+
+    /**
+     * Instantiates a new Statystyki.
+     *
+     * @param rozmiarOkna rozmiar okna typu Koordy, zawiera wymiary okna Aplikacji wyrażone w pixelach
+     */
     public Statystyki(Koordy rozmiarOkna) {
         rozmiarStatystyk= new Koordy((int)(rozmiarOkna.x*0.2),(int)(rozmiarOkna.y*0.75));
-//        setPreferredSize(new Dimension(rozmiarStatystyk.x+20, rozmiarStatystyk.y));
         setMaximumSize(new Dimension(Integer.MAX_VALUE, rozmiarStatystyk.y+20));
     }
 
